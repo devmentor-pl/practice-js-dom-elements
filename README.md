@@ -8,7 +8,7 @@ Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy
 
 &nbsp;
 
-> Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl)
+> Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)
 
 ## Jak wykonać zadania?
 
