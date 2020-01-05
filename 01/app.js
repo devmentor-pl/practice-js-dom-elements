@@ -1,1 +1,1 @@
-console.log('DOM');
+console.log(document.querySelectorAll('.comments__item.comments__item--newest [data-info]').length)
