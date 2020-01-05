@@ -46,7 +46,7 @@ const children = [...currentArticle.children]
 currentArticle.nextElementSibling.title = 'nextElementSibling'
 const section = currentArticle.parentNode
 const articlesLength = section.children.length
-const lastArticle = articleParent.children[articlesLength - 1]
+const lastArticle = section.children[articlesLength - 1]
 
 const paragraph = createNewParagraph('example')
 const lastElementInArticle = lastArticle.children[lastArticle.children.length - 1]
