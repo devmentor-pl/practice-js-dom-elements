@@ -1,5 +1,9 @@
 # [![](assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JS DOM Elements
 
+> :speech_balloon: Jeśli oczekujesz informacji zwrotnej do napisanych przez Ciebie rozwiązań w formie komentarzy do kodu tzw. Code Review to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl).
+
+&nbsp;
+
 Elementy DOM to małe klocki, z których jest budowana strona internetowa.
 
 Umiejętne wyszukiwanie, dodawanie, modyfikowanie czy usuwanie tych elementów jest pierwszym krokiem do budowania interaktywnych i nowoczesnych stron internetowych.
@@ -8,7 +12,9 @@ Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy
 
 &nbsp;
 
-> Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)
+> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl/p/js-dom-elements/).
+
+> :white_check_mark: Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy, aby przejść do następnych zagadnień :arrow_right:
 
 ## Jak wykonać zadania?
 
@@ -16,8 +22,8 @@ Po pobraniu plików (o czym za chwilę) należy wykonywać zadania zgodnie z num
 
 Mamy dwie ścieżki dla pobrania plików:
 
-* Chcę od razu przejść do zadań
-* Mam już doświadczenie z GitHub-em i GIT-em
+- Chcę od razu przejść do zadań
+- Mam już doświadczenie z GitHub-em i GIT-em
 
 ### Chcę od razu przejść do zadań
 
@@ -35,4 +41,4 @@ Dzieki temu rozwiązaniu będę mógł śledzić postępy Twojej pracy nad zadan
 
 &nbsp;
 
-> Powodzenia! Mateusz Bogolubow, [devmentor.pl](https://devmentor.pl)
+> Powodzenia! :zap: :zap: :zap: Mateusz Bogolubow, [devmentor.pl](https://devmentor.pl)

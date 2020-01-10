@@ -1,5 +1,9 @@
 # [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JS DOM Elements #04
 
+> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+
+&nbsp;
+
 Utwórz poniższą strukturę menu za pomocą JS:
 
 ```
@@ -7,7 +11,7 @@ Utwórz poniższą strukturę menu za pomocą JS:
     <li><a href="/">start</a></li>
     <li><a href="/gallery">galeria</a></li>
     <li><a href="/contact">kontakt</a></li>
-</ul>  
+</ul>
 ```
 
 Całość wstaw do elementu `<nav/>`.
@@ -26,4 +30,4 @@ Następnie zrób to samo, ale używając danych powyżej wraz z np. [forEach](ht
 
 &nbsp;
 
-> Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)
+> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)

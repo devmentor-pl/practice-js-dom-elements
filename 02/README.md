@@ -1,5 +1,9 @@
 # [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JS DOM Elements #02
 
+> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+
+&nbsp;
+
 Kolejny wyzwaniem będzie wyszukanie wszystkich linków, które posiadają atrybut `data-url`.
 
 Następnie należy pobrać zawartość tego atrybutu do zmiennej.
@@ -10,4 +14,4 @@ Sprawdź czy każdy z linków działa prawidłowo tj. przekierowuje na odpowiedn
 
 &nbsp;
 
-> Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)
+> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)
