@@ -16,7 +16,7 @@ Utwórz poniższą strukturę menu za pomocą JS:
 
 Całość wstaw do elementu `<nav/>`.
 
-Początkowo spróbuj wykonać to zadanie bez wykorzystania poniższej klasy:
+Początkowo spróbuj wykonać to zadanie bez wykorzystania poniższej struktury:
 
 ```
 const menuItems = [
@@ -26,7 +26,7 @@ const menuItems = [
 ]
 ```
 
-Następnie zrób to samo, ale używając danych powyżej wraz z np. [forEach](https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/forEach).
+Następnie zrób to samo, ale używając danych wraz z np. [forEach](https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/forEach).
 
 &nbsp;
 
