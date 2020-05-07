@@ -4,7 +4,16 @@ const comments= document.querySelector('.comments');
 //console.log(comments)
 if(comments)
 {
-    const commentsItems= comments.querySelector('.comments__item' && '.comments__item--newest');
+    const deeperComments = comments.querySelector('.comments__item.comments__item--newest')
+    if(deeperComments){
+    const dataInfo = deeperComments.querySelectorAll('[data-info]')
+    console.log(dataInfo.length)
+
+    }
+
+
+}
+    /*const commentsItems= comments.querySelector('.comments__item' && '.comments__item--newest');
     if(commentsItems){
         //console.log(commentsItems)
         const data = commentsItems.querySelectorAll('span');
@@ -20,5 +29,5 @@ if(comments)
    
       }
           console.log(arr.length);
-    }
-}
+    }*/
+
