@@ -24,18 +24,25 @@ const buttonSettings = {
  for(key in buttonSettings)
  {
      if(key === 'attr'){
-     newButton.classList.add(buttonSettings.attr.className)
-     newButton.title= buttonSettings.attr.title
+     newButton.classList.add(buttonSettings.attr.className);
+     newButton.title= buttonSettings.attr.title;
      //console.log('jest')
     }
      if(key === 'css')
      {
-         newButton.style.border = buttonSettings.css.border
-         newButton.style.padding = buttonSettings.css.padding
-         newButton.style.backgroundColor = buttonSettings.css.color
+         const settings = buttonSettings[key];
+        for( const newKey in settings);
+        {
+            newButton.style[newKey] = settings[newKey];
+        }
+
+
+         //newButton.style.border = buttonSettings.css.border
+        // newButton.style.padding = buttonSettings.css.padding
+        // newButton.style.backgroundColor = buttonSettings.css.color
      }
      if(key === 'text')
-     newButton.innerHTML = buttonSettings.text
+     newButton.innerHTML = buttonSettings.text;
      //console.log('je')
  }
- parent.appendChild(newButton)
+ parent.appendChild(newButton);
