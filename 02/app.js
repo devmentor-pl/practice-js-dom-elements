@@ -1,7 +1,18 @@
 console.log('DOM');
 
-const aElements = document.querySelectorAll('a');
+const aElements = document.querySelectorAll('a[data-url]');
 const arr = Array.from(aElements);
+
+arr.forEach(function(el)
+{
+    const url = el.dataset.url
+    //console.log(url)
+    el.setAttribute('href', url)
+})
+
+
+
+/*const arr = Array.from(aElements);
 console.log(arr);
 if(arr){
 /*for(let i = 0; i<arr.length; i++)
@@ -12,7 +23,7 @@ if(arr){
  
    
 }
-console.log(arr.length);*/
+console.log(arr.length);
 
 
 const devmentor = arr[0].getAttribute('data-url');
@@ -49,7 +60,7 @@ if(!bigNullHrefSet.hasAttribute('href'))
    // console.log(bigNullHrefSet)
 }
 
-}
+}*/
 //zostawiam też niektóre zakomentowane rzeczy, żeby pokazać mój tok myślowy, jak próbowałem zadanie rozwiązać. Czy trzeba to wszystko wpisywać ręcznie
 //czy można, to jakoś wpisać za pomocą pętli lub funkcji?
 
