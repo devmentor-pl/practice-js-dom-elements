@@ -21,8 +21,10 @@ nav.appendChild(ul);
 
 
 menuItems.forEach((el) => {
-  let list = document.createElement('li');
-  ul.appendChild(list);
-  list.setAttribute('url', el.url)
-  list.innerText = el.text;
+  let listItem = document.createElement('li');
+  let aItem = document.createElement('a');
+  ul.appendChild(listItem);
+  listItem.appendChild(aItem);
+  aItem.setAttribute('href', el.url)
+  aItem.innerText = el.text;
 });
