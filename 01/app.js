@@ -2,7 +2,7 @@ console.log('DOM');
 
 
 
-const item = document.getElementsByClassName('.comments__item comments__item--newest');
+const item = document.getElementsByClassName('.comments__item .comments__item--newest');
 
 console.log(item);
 

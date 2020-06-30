@@ -31,10 +31,10 @@ menuItems.forEach(function (item) {
     liElement.appendChild(aElement);
 
 
-    if (aElement) {
-        aElement.setAttribute('href', item.url);
-        console.log(aElement)
-        aElement.innerText = item.text;
-    }
+
+    aElement.setAttribute('href', item.url);
+    console.log(aElement)
+    aElement.innerText = item.text;
+
 
 })

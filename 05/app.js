@@ -1,8 +1,9 @@
 console.log('DOM');
 
 const curr = document.querySelector('.js-curr');
+const articleMain = document.querySelector('.articles__item');
 const deleteBtn = document.createElement('button');
-curr.appendChild(deleteBtn)
+articleMain.appendChild(deleteBtn)
 deleteBtn.innerHTML = "usuń z koszyka"
 
 
@@ -18,8 +19,10 @@ arrAllBtn.forEach(function (item) {
 
 
 
+
+
 const article = document.querySelector('.article')
-const parent = article.parentElement;
+const parent = articleMain.parentElement;
 console.log(parent)
 parent.setAttribute('title', 'nextElementSibling')
 
@@ -27,19 +30,23 @@ parent.setAttribute('title', 'nextElementSibling')
 
 
 
+const beforeLastArticle = articleMain.nextElementSibling;
+const lastArticle = beforeLastArticle.nextElementSibling;
+let lastBtn = lastArticle.querySelector('button');
+
 const paragraph = document.createElement('p');
-//  const lastArticle = document.querySelector('articles__item: last-child')
 
 
 paragraph.classList.add('add-paragraph')
 paragraph.textContent = 'new paragraph';
-paragraph.insertBefore(paragraph, article);
+lastBtn = lastArticle.insertBefore(paragraph, lastBtn);
 
-/*czemu tu idzie mi na samą górę, ten paragraf, nie wiem jak to zrobić żeby był przed button w ost sekcji*/
 
-console.log(paragraph)
 
-const newArticle = article.cloneNode(true);
+
+
+// console.log(paragraph)
+
+const newArticle = articleMain.cloneNode(true);
+articleMain.appendChild(newArticle);
 console.log(newArticle)
-
-/*czemu mi nie duplikuje?*/
