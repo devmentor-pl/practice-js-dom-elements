@@ -1,5 +1,4 @@
 const hasUrlList = document.querySelectorAll("[data-url]");
-console.log(hasUrlList)
 
 if (hasUrlList) {
   // Nie zrozumiałam - czy o takie zapisanie wartości atrybutu do zmiennej chodziło? Czy może tylko o tą NodeList wyżej?
