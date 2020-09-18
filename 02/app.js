@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const hasUrlList = document.querySelectorAll("[data-url]");
 
 if (hasUrlList) {
@@ -11,3 +12,6 @@ if (hasUrlList) {
   })
 }
 
+=======
+console.log('DOM');
+>>>>>>> parent of 279e766... solve 02 task
