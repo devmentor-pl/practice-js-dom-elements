@@ -1,39 +1,26 @@
 // ROZWIĄZANIE NR 1 - BEZ WYKORZYSTANIA TABLICY OBIEKTÓW
+const navEl = document.querySelector('nav');
 
-// const navEl = document.querySelector('nav');
-// const ulEl = document.createElement('ul');
-// const menuItNames = ['start', 'galeria', 'kontakt']
-// const menuANames = ['/ ', '/gallery', '/contact']
-
-
-// const liList = childrenList('li', menuItNames.length);
-
-// for (item of liList) {
-//     const child = document.createElement('a');
-//     item.appendChild(child);
-// }
-// for (let i = 0; i < menuItNames.length; i++) {
-//     liList[i].querySelector('a').setAttribute('href', menuANames[i]);
-//     liList[i].querySelector('a').innerText = menuItNames[i]
-// }
-
-// addChildren(ulEl, liList);
-// navEl.appendChild(ulEl)
+if (navEl) {
+    const ulEl = document.createElement('ul');
+    const menuItNames = ['start', 'galeria', 'kontakt']
+    const menuANames = ['/ ', '/gallery', '/contact']
 
 
-// function childrenList(item, amount) {
-//     let arr = [];
-//     for (let i = 0; i < amount; i++) {
-//         arr.push(document.createElement(item));
-//     }
-//     return arr
-// }
+    const liList = childrenList('li', menuItNames.length);
 
-// function addChildren(parent, children) {
-//     for (child of children) {
-//         parent.appendChild(child)
-//     }
-// }
+    for (item of liList) {
+        const child = document.createElement('a');
+        item.appendChild(child);
+    }
+    for (let i = 0; i < menuItNames.length; i++) {
+        liList[i].querySelector('a').setAttribute('href', menuANames[i]);
+        liList[i].querySelector('a').innerText = menuItNames[i]
+    }
+
+    addChildren(ulEl, liList);
+    navEl.appendChild(ulEl)
+}
 
 // ROZWIĄZANIE NR 2 Z WYKORZYSTANIEM TABLICY OBIEKTÓW
 // struktura do wykorzystania w pętli
@@ -42,8 +29,9 @@ const menuItems = [
     {text: 'galeria', url: '/gallery'},
     {text: 'kontakt', url: '/contact'},
 ];
-const navEl = document.querySelector('nav');
-const ulEl = document.createElement('ul');
+
+if (navEl) {
+    const ulEl = document.createElement('ul');
 const liList = [];
 
 menuItems.forEach(item => {
@@ -56,7 +44,8 @@ menuItems.forEach(item => {
 })
 
 addChildren(ulEl, liList);
-navEl.appendChild(ulEl)
+    navEl.appendChild(ulEl)
+}
 
 function childrenList(item, amount) {
     let arr = [];
