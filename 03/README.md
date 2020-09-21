@@ -23,7 +23,7 @@ const buttonSettings = {
 }
 ```
 
-Spróbuj utworzyć taki obiekt zgodnie z wytycznymi używając do tego pętli np. [for...in](https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Polecenia/for...in).
+Spróbuj utworzyć przy pomocy JavaScript taki obiekt (element HTML) zgodnie z wytycznymi używając do tego pętli np. [for...in](https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Polecenia/for...in).
 
 Pamiętaj, aby ten przycisk był widoczny na stronie.
 
