@@ -9,15 +9,13 @@ if (navEl) {
 
     const liList = childrenList('li', menuItNames.length);
 
-    for (item of liList) {
+    for (let i = 0; i < liList.length; i++) {
         const child = document.createElement('a');
-        item.appendChild(child);
+        child.setAttribute('href', menuANames[i]);
+        child.innerText = menuItNames[i];
+        liList[i].appendChild(child);
     }
-    for (let i = 0; i < menuItNames.length; i++) {
-        liList[i].querySelector('a').setAttribute('href', menuANames[i]);
-        liList[i].querySelector('a').innerText = menuItNames[i]
-    }
-
+  
     addChildren(ulEl, liList);
     navEl.appendChild(ulEl)
 }
