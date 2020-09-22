@@ -10,7 +10,7 @@ if (curr) {
   // dla wszystkich elementów, które są rodzeństwem dla elementu o klasie .js-curr dodaj klasę .siblings (wykorzystaj pętlę)
   const children = Array.from(curr.parentElement.children);
 
-  for (sibling of children) {
+  for (let sibling of children) {
     if (!sibling.className.includes('js-curr')) {
       sibling.classList.add('siblings');
     }
