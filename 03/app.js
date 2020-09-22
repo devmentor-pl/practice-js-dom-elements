@@ -16,20 +16,16 @@ const btnParent = document.querySelector('.parent-for-button');
 if (btnParent) {
     const btnNew = document.createElement('button');
 
-    if (typeof buttonSettings.attr !== 'undefined') {
         for (item in buttonSettings.attr) {
             btnNew.className = buttonSettings.attr.className;
             btnNew.setAttribute('title', buttonSettings.attr.title)
         }
-    }
-
-    if (typeof buttonSettings.css !== 'undefined') {
         for (item in buttonSettings.css) {
             btnNew.style.border = buttonSettings.css.border
             btnNew.style.padding = buttonSettings.css.padding
             btnNew.style.color = buttonSettings.css.color
         }
-    }
+
     if (buttonSettings.text) { btnNew.innerHTML = buttonSettings.text; }
 
     btnParent.appendChild(btnNew)
