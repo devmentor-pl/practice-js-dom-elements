@@ -11,7 +11,7 @@ if (curr) {
   const children = Array.from(curr.parentElement.children);
 
   for (let sibling of children) {
-    if (!sibling.className.includes('js-curr')) {
+    if (sibling !== curr) {
       sibling.classList.add('siblings');
     }
   }
