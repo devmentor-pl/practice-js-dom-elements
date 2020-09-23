@@ -5,7 +5,5 @@ const comments = document.querySelector(
 if (comments) {
   const elements = comments.querySelectorAll("[data-info]");
 
-  if (elements) {
-    console.log(elements.length);
-  }
+  console.log(elements.length);
 }

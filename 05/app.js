@@ -9,7 +9,9 @@ if (curr) {
   curr.parentElement.appendChild(removeButton);
 
   Array.from(curr.parentElement.children).forEach((elem) => {
-    elem.classList.add("siblings");
+    if (elem !== curr) {
+      elem.classList.add("siblings");
+    }
   });
 
   const nextArticle = curr.parentElement.nextElementSibling;

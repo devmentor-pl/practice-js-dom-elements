@@ -17,7 +17,7 @@ if (nav) {
   //   ul.appendChild(createLinkItem("kontakt", "/contact"));
 
   menuItems.forEach((item) => {
-    if (item.text !== undefined && item.url !== undefined) {
+    if (typeof item.text !== "undefined" && typeof item.url !== "undefined") {
       ul.appendChild(createLinkItem(item.text, item.url));
     }
   });
