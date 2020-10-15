@@ -26,8 +26,8 @@ const menuItems = [
 ]
 ```
 
-Następnie zrób to samo, ale używając danych wraz z np. [forEach](https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/forEach).
-
+Następnie zrób to samo, ale używając danych wraz z np. [forEach]().
+https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/forEach
 &nbsp;
 
 > :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl/p/js-dom-elements/)
