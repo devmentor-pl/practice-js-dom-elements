@@ -30,7 +30,7 @@ const buttonAttr = function (btn) {
         if (property === 'className') {
             btn.setAttribute('class', buttonSettings['attr'][property]);
         } else {
-            btn.setAttribute('data-' + property, buttonSettings['attr'][property])
+            btn.setAttribute(property, buttonSettings['attr'][property])
         }
     }
 }
