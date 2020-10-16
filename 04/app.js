@@ -30,6 +30,7 @@ menuContainer.appendChild(menu);
 
 
 //II sposób
+const newMenu = document.createElement('ul');
 menuItems.forEach(function (element) {
 
     const listItem = document.createElement('li');
@@ -45,5 +46,7 @@ menuItems.forEach(function (element) {
     }
 
     listItem.appendChild(linkItem);
-    menuContainer.appendChild(listItem);
+    newMenu.appendChild(listItem);
 })
+
+menuContainer.appendChild(newMenu);
