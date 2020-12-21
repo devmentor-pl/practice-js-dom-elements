@@ -20,20 +20,19 @@ const newButton = document.createElement('button');
 
 for (const key in buttonSettings) {
     if (key === 'attr') {
-        {
-            newButton.setAttribute('class', buttonSettings[key].className);
-            newButton.setAttribute('title', buttonSettings[key].title);
-        }
 
+        for (const key in buttonSettings.attr) {
+            newButton.setAttribute(key, buttonSettings.attr[key]);
+        }
     }
+
     if (key === 'css') {
-        {
-            newButton.style.border = buttonSettings[key].border;
-            newButton.style.padding = buttonSettings[key].padding;
-            newButton.style.color = buttonSettings[key].color;
-        }
 
+        for (const key in buttonSettings.css) {
+            newButton.style[key] = buttonSettings.css[key];
+        }
     }
+
     if (key === 'text') {
         newButton.innerText = buttonSettings[key];
     }

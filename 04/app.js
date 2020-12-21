@@ -52,7 +52,7 @@ if (navElement) {
     const ulElement = document.createElement('ul');
     navElement.appendChild(ulElement);
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < menuItems.length; i++) {
 
         const liElement = document.createElement('li');
         ulElement.appendChild(liElement);
@@ -60,13 +60,8 @@ if (navElement) {
         const aElement = document.createElement('a');
         liElement.appendChild(aElement);
 
-        menuItems.forEach(function (elObject, indexObject) {
-            if (i === indexObject) {
-                aElement.setAttribute('href', elObject.url);
-                aElement.innerText = elObject.text;
-            }
+        aElement.setAttribute('href', menuItems[i].url);
+        aElement.innerText = menuItems[i].text;
 
-        });
     }
-
 }

@@ -1,7 +1,7 @@
 console.log('DOM');
 
 
-const commentsElement = document.querySelector('.comments__item, .comments__item--newest ');
+const commentsElement = document.querySelector('.comments__item.comments__item--newest');
 
 
 console.log(commentsElement);
