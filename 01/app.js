@@ -1,6 +1,23 @@
 //?dev Czy ten zapis dałoby się jakoś skrócić? Czy w nawiasie tej metody możemy jakoś zapisać dwie klasy jednoczenie? W querySelector by przeszło ale to działa szybciej. 
-const elCommentsNewest = document.getElementsByClassName('comments__item comments__item--newest');
+const elCommentsNewest = document.querySelectorAll('.comments__item.comments__item--newest');
 console.log(elCommentsNewest);
+
+const elWithDataInfo = elCommentsNewest.getElementsByName('data-info');
+console.log(elWithDataInfo);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const hasDataInfo = elCommentsNewest.hasAttribute('data-info');
