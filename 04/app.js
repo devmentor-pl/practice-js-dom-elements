@@ -49,13 +49,14 @@ if(navigation) {
     const list = document.createElement('ul');
     
     menuItems.forEach((element, index) => {
+        console.log(element.url)
         const listItem = document.createElement('li');
         const itemLink = document.createElement('a');
 
         list.appendChild(listItem);
         listItem.appendChild(itemLink);
 
-        itemLink.setAttribute('href', menuItems[index]['url']);
+        itemLink.setAttribute('href', element.url);
         itemLink.textContent = menuItems[index]['text'];
     });
 

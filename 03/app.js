@@ -17,7 +17,7 @@ const sectionHtml = document.querySelector('.parent-for-button');
 if(sectionHtml) {
     const button = document.createElement('button');
     
-    //Add attribute. 
+/*     //Add attribute. 
     for(const property in buttonSettings.attr) {
         property === 'className' ? button.setAttribute('class', buttonSettings.attr[property]) : button.setAttribute(property, buttonSettings.attr[property]);
         }
@@ -25,6 +25,16 @@ if(sectionHtml) {
     // Add class
     for(const property in buttonSettings.css) {
         button.style[property] = buttonSettings.css[property];
+    } */
+
+    for(const property in buttonSettings) {
+        for(const key in buttonSettings.attr) {
+            key === 'className' ? button.setAttribute('class', buttonSettings.attr[key]) : button.setAttribute(key, buttonSettings.attr[key]);
+        }
+
+        for(const key in buttonSettings.css) {
+            button.style[key] = buttonSettings.css[key];
+        }
     }
 
 
