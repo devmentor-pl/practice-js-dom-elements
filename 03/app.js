@@ -13,30 +13,32 @@ const buttonSettings = {
     text: 'Click me!',
 }
 
-const buttonParent = document.querySelector('.parent-for-button');
-
+const buttonParent = document.querySelector('.parent-for-button');;
 const button = document.createElement('button');
+buttonParent.appendChild(button);
+// const propName = 'title';
+// button[propName] = 'tytuł: 1px solid red';
+
 
 for (const property in buttonSettings) {
 
-    if (property === 'attr') {
-        const attrObj = buttonSettings[property];
-        //    console.log(property);
-        //    console.log(attrObj);
-        attrObj.className = 'btn';
-        attrObj.title = 'super button';
-        
-        if (property === 'css') {
-            attrObj.style.border = '1px solid #336699';
-            attrObj.style.padding = '5px 20px';
-            attrObj.color = '#444';
+    // console.log(property, buttonSettings[property]);
 
-            if (property === 'text') {
-                attrObj.innerText = 'Click me!'
-            }
-        }
+    if(property === 'attr') {
+        const obj = buttonSettings[property];
+
+        for (const key in obj) {    
+            button[key] = obj[key]
+        }    
+    } else if (property === 'css') {
+        const obj = buttonSettings[property];
+
+        for (const key in obj) {    
+            button.style[key] = obj[key]
+        } 
+    } else if(property === 'text') {
+        button.innerText = buttonSettings[property];
     }
-
-
-
 }
+
+console.log(button);
