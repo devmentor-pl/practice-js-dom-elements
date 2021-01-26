@@ -13,14 +13,30 @@ const buttonSettings = {
     text: 'Click me!',
 }
 
+
 const parentForButton = document.querySelector('.parent-for-button');
 if(parentForButton) {
     const button = document.createElement('button');
+
+    for(const propName in buttonSettings) {
+        console.log(propName, buttonSettings[propName]);
+        
+        const propValue = buttonSettings[propName];
+
+        if(propName === 'attr') {
+            for(const attrName in propValue) {
+                button[attrName] = propValue[attrName];
+            }
+        } else if(propName === 'css') {
+            for(const styleName in propValue) {
+                button.style[styleName] = propValue[styleName];
+
+            }
+        } else if(propName === 'text') {
+            button.innerText = propValue;
+        }
+    }
     parentForButton.appendChild(button);
-    button.textContent = buttonSettings.text;
-    
-
-
-
-
 }
+
+
