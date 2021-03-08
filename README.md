@@ -24,7 +24,7 @@ Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy
 
 &nbsp;
 
-:arrow_left: [*poprzedni zestaw zadań (**JavaScript: [MODUŁ]**)*](linklinklinklinklinklinklinklink)
+:arrow_left: [*poprzedni zestaw zadań (**JavaScript: Podstawy**)*](https://github.com/devmentor-pl/practice-js-basics)
 
 ## Jak prawidłowo wykonać zadania?
 
