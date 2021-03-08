@@ -1,8 +1,10 @@
-# [![](assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; JS DOM Elements
 
-> :speech_balloon: Jeśli oczekujesz informacji zwrotnej do napisanych przez Ciebie rozwiązań w formie komentarzy do kodu tzw. Code Review to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl).
+
+> :dart: *Chcę mieć absolutną pewność, że **darmowe materiały**, które publikuję, spełniają Twoje oczekiwania. Dlatego oferuję Ci ebooka o wartości 39 PLN: `Jak zostać programistą? SKUTECZNY PRZEWODNIK` w zamian za [wypełnienie ankiety](https://devmentor.pl/ankieta).*
 
 &nbsp;
+
+# JavaScript: DOM Elements
 
 Elementy DOM to małe klocki, z których jest budowana strona internetowa.
 
@@ -12,33 +14,28 @@ Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy
 
 &nbsp;
 
-> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl/p/js-dom-elements/).
+## Zadania
 
-> :white_check_mark: Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy, aby przejść do następnych zagadnień :arrow_right:
-
-## Jak wykonać zadania?
-
-Po pobraniu plików (o czym za chwilę) należy wykonywać zadania zgodnie z numerami - od najniższego numeru do najwyższego. Zgodnie z ich treścią, którą znajdziesz w pliku README.md w każdym z katalogów. Poziom trudności stopniowo się zwiększa.
-
-Mamy dwie ścieżki dla pobrania plików:
-
-- Chcę od razu przejść do zadań
-- Mam już doświadczenie z GitHub-em i GIT-em
-
-### Chcę od razu przejść do zadań
-
-Po prawej stronie znajdziesz przycisk "clone or download" - kliknij go.
-
-Powinien pojawić się element, w którym znajdziesz opcje "Download ZIP" - ponownie wykonaj klik.
-
-Teraz wystarczy, że rozpakujesz pobrane plik i otworzysz w swoim ulubionym edytorze (proponuję [VSC](https://code.visualstudio.com/)).
-
-### Mam już doświadczenie z GitHub-em i GIT-em
-
-Najwygodniej będzie wykonać `fork` (prawy górny róg strony), co utworzy kopie tego repozytorium na Twoim koncie GitHub i będziesz mógł wykonywać zadania na swoim repozytorium.
-
-Dzieki temu rozwiązaniu będę mógł śledzić postępy Twojej pracy nad zadaniami.
+> :fire: *Raz w tygodniu wykonuję **bezpłatny [Code Review](https://en.wikipedia.org/wiki/Code_review)** wybranej losowo osobie, która nie współpracuje ze mną w ramach [mentoringu](https://devmentor.pl/mentoring-javascript/). Zrób [Pull Request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork) i weź udział w losowaniu. Życzę Ci efektywnej nauki programowania! Pozdrawiam, [Mateusz Bogolubow](https://www.linkedin.com/in/mateusz-bogolubow/).*
 
 &nbsp;
 
-> Powodzenia! :zap: :zap: :zap: Mateusz Bogolubow, [devmentor.pl](https://devmentor.pl)
+### :point_right: &nbsp; [`#01`](./01) &nbsp; [`#02`](./02) &nbsp; [`#03`](./03) &nbsp; [`#04`](./04) &nbsp; [`#05`](./05) &nbsp; :point_left:
+
+&nbsp;
+
+:arrow_left: [*poprzedni zestaw zadań (**JavaScript: [MODUŁ]**)*](linklinklinklinklinklinklinklink)
+
+## Jak prawidłowo wykonać zadania?
+
+Najpierw zrób tzw. [`fork`](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo) (prawy, górny róg strony). W ten sposób utworzysz kopię tego repozytorium na Twoim koncie GitHub. 
+
+Teraz będziesz mógł wykonywać zadania na swoim repozytorium. Wystarczy, że skopiujesz pliki na swój komputer przy pomocy komendy [`git clone`](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
+
+Zadania rozwiązuj jedno po drugim, ponieważ z każdym kolejnym ich poziom trudności wzrasta.  
+
+Pamiętaj o zapisywaniu historii zmian w plikach przy pomocy komend [`git add`](https://github.com/git-guides/git-add) oraz [`git commit`](https://github.com/git-guides/git-commit).
+
+Aby wysłać dane na zdalny serwer, wystarczy komenda [`git push`](https://github.com/git-guides/git-push).
+
+Po wysłaniu plików na GitHuba wykonaj [Pull Request](https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork), aby wziąć udział w losowaniu bezpłatnego [Code Review](https://en.wikipedia.org/wiki/Code_review) wykonanych zadań.
