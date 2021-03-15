@@ -3,7 +3,7 @@
 
 &nbsp;
 
-# `#02` JavaScript: DOM Elements
+# `#02` JavaScript: Elementy DOM
 
 Kolejny wyzwaniem będzie wyszukanie wszystkich linków, które posiadają atrybut `data-url`.
 
