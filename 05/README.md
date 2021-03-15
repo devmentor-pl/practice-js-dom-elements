@@ -3,7 +3,7 @@
 
 &nbsp;
 
-# `#05` JavaScript: DOM Elements
+# `#05` JavaScript: Elementy DOM
 
 
 W pliku `./app.js` znajdziesz zmienną `curr`, która wskazuje na element o klasie `.js-curr`.
