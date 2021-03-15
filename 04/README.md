@@ -3,7 +3,7 @@
 
 &nbsp;
 
-# `#04` JavaScript: DOM Elements
+# `#04` JavaScript: Elementy DOM
 
 
 
