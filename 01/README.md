@@ -3,7 +3,7 @@
 
 &nbsp;
 
-# `#01` JavaScript: DOM Elements
+# `#01` JavaScript: Elementy DOM
 
 Wyszukaj element, który posiada dwie klasy tj. `.comments__item` oraz `.comments__item--newest`.
 
