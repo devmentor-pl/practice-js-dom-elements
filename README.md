@@ -4,7 +4,7 @@
 
 &nbsp;
 
-# JavaScript: DOM Elements
+# JavaScript: Elementy DOM
 
 Elementy DOM to małe klocki, z których jest budowana strona internetowa.
 
