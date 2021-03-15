@@ -3,7 +3,7 @@
 
 &nbsp;
 
-# `#03` JavaScript: DOM Elements
+# `#03` JavaScript: Elementy DOM
 
 
 Utwórz element `<button/>`, który wstawisz do elementu o klasie `.parent-for-button`.
