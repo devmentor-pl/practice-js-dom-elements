@@ -5,7 +5,7 @@
 
 # `#02` JavaScript: Elementy DOM
 
-Kolejny wyzwaniem będzie wyszukanie wszystkich linków, które posiadają atrybut `data-url`.
+Kolejnym wyzwaniem będzie wyszukanie wszystkich linków, które posiadają atrybut `data-url`.
 
 Następnie należy pobrać zawartość tego atrybutu do zmiennej.
 
