@@ -8,6 +8,5 @@ dataUrl.forEach(function(item) {
     console.log(link);
 
     item.setAttribute("href", link);
-    console.log(item);
 
 })

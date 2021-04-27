@@ -9,8 +9,8 @@ if(curr) {
     articleElement.appendChild(buttonElement);
 
     if(articleElement.hasChildNodes()) {
-        const child = articleElement.children;
-        const arrChild = Array.from(child);
+        const articleElementChildren = articleElement.children;
+        const arrChild = Array.from(articleElementChildren);
         arrChild.forEach(function(element) {
             element.classList.add("siblings");
         });

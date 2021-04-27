@@ -21,16 +21,8 @@ if(navElement){
         const linkElement = document.createElement("a");
         liElement.appendChild(linkElement);
 
-        if(i === 0) {
-            linkElement.setAttribute("href", "/");
-            linkElement.innerText = "start";
-        } else if(i === 1) {
-            linkElement.setAttribute("href", "/gallery");
-            linkElement.innerText = "galeria";
-        } else if(i === 2) {
-            linkElement.setAttribute("href", "/contact");
-            linkElement.innerText = "kontakt";
-        }
+        linkElement.setAttribute("href", menuItems[i].url);
+        linkElement.innerText = menuItems[i].text;
     }
 }
 
