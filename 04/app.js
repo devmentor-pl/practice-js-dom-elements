@@ -8,7 +8,7 @@ const menuItems = [
 ];
 
 
-// Sposób drugi
+// Optymalizacja
 
 const nav = document.querySelector('nav');
 console.log(nav);
@@ -16,20 +16,20 @@ console.log(nav);
 if(nav) {
     const ul = document.createElement('ul');
 
-    if(ul) {
-        for(let i=1; i<=3; i++) {
-            ul.appendChild(  document.createElement('li') );
-        }
-    }
+    menuItems.forEach( function(element, index) {
+
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+
+            a.textContent = menuItems[index].text;
+            a.setAttribute('url', menuItems[index].url);
+
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
 
     nav.appendChild(ul)
     nav.childNodes[1].remove();
-
-    document.querySelectorAll('li').forEach( function(element, index) {
-
-        element.textContent = menuItems[index].text;
-        element.setAttribute( 'url', menuItems[index].url );
-    } )
 }
 
 
@@ -71,3 +71,26 @@ if(nav) {
 
 
 
+// // Sposób drugi
+
+// const nav = document.querySelector('nav');
+// console.log(nav);
+
+// if(nav) {
+//     const ul = document.createElement('ul');
+
+//     if(ul) {
+//         for(let i=1; i<=menuItems.length; i++) {
+//             ul.appendChild(  document.createElement('li') );
+//         }
+//     }
+
+//     nav.appendChild(ul)
+//     nav.childNodes[1].remove();
+
+//     document.querySelectorAll('li').forEach( function(element, index) {
+
+//         element.textContent = menuItems[index].text;
+//         element.setAttribute( 'url', menuItems[index].url );
+//     } )
+// }
