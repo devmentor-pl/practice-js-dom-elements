@@ -18,17 +18,23 @@ const parent = document.querySelector('.parent-for-button')
 
 if(parent) {
 
-   const btn = document.createElement('button');
+    const btn = document.createElement('button');
 
-   for(const key in buttonSettings.attr) {
-    btn.setAttribute( key , buttonSettings.attr[key] )
-   }
+    for(const key in buttonSettings) {
 
-   for(const key in buttonSettings.css) {
-    btn.style.setProperty( key , buttonSettings.css[key])
-   }
-
-    btn.textContent = buttonSettings.text;
-
+        if( key === 'attr' )  {
+            for(const key in buttonSettings.attr) {
+                btn.setAttribute(key , buttonSettings.attr[key])
+            }
+        }
+        else if( key === 'css' ) {
+            for(const key in buttonSettings.css) {
+                btn.style.setProperty( key , buttonSettings.css[key])
+            }
+        }
+        else {
+            btn.textContent = buttonSettings.text
+        }
+    }
     parent.appendChild(btn)
 }
