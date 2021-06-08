@@ -34,7 +34,7 @@ for (let i = 0; i < 3; i++) {
     aElement.innerText = 'kontakt';
     }
 }
-}
+
 
 const menuItems = [
     {text: 'start', url: '/'},
@@ -51,8 +51,8 @@ if (navElement) {
         const li = document.createElement ('li');
         const a = document.createElement ('a');
 
-        a.setAttribute ( menuItems[i].url);
-        a.innerText = menuItems[i].text;
+        a.setAttribute ( 'href',menuItems[index].url);
+        a.innerText = menuItems[index].text;
 
         li.appendChild(a);
         ul.appendChild(li);

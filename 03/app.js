@@ -25,9 +25,9 @@ if(classElement) {
     
         }
         if (newObject === 'css') {
-            btn.border = buttonSettings.css.border;
-            btn.padding = buttonSettings.css.padding;
-            btn.color = buttonSettings.css.color;
+            btn.style.border = buttonSettings.css.border;
+            btn.style.padding = buttonSettings.css.padding;
+            btn.style.color = buttonSettings.css.color;
         }
         if (newObject === 'text') {
             btn.innerText = buttonSettings.text;
