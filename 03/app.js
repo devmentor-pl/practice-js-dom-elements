@@ -16,25 +16,22 @@ if(classElement) {
         },
         text: 'Click me!',
     }
-    
-    for (let newObject in buttonSettings) {
-        
-        if (newObject === 'attr') {
-            btn.className = buttonSettings.attr.className;
-            btn.title = buttonSettings.attr.title;
-    
-        }
-        if (newObject === 'css') {
-            btn.style.border = buttonSettings.css.border;
-            btn.style.padding = buttonSettings.css.padding;
-            btn.style.color = buttonSettings.css.color;
-        }
-        if (newObject === 'text') {
-            btn.innerText = buttonSettings.text;
-        }
-    }
-    
-    
-    classElement.appendChild(btn);
-    console.log(classElement, buttonSettings);
+
+
+for (prop in buttonSettings.attr){
+btn.className = buttonSettings.attr.className;
+btn.setAttribute('title', buttonSettings); 
+}
+
+for (prop in buttonSettings.css) {
+btn.style.border = buttonSettings.css.border;
+btn.style.padding = buttonSettings.css.padding;
+btn.style.color = buttonSettings.css.color;
+}
+
+for (prop in buttonSettings.text) {
+    btn.innerText = buttonSettings.text;
+}
+
+classElement.appendChild(btn);
 }
