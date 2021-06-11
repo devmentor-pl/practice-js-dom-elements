@@ -13,7 +13,11 @@ if(navElement) {
 const ulElement = document.createElement ('ul');
 navElement.appendChild(ulElement);
 
-for (let i = 0; i <3; i++) {
+
+menuItems.forEach(functio (item) {
+    
+})
+
 
     const liElement = document.createElement('li');
     ulElement.appendChild(liElement);
@@ -31,7 +35,6 @@ for (let i = 0; i <3; i++) {
         aList[j].setAttribute('href', url[j]);
             }
         }
-    }
 }
 
 
