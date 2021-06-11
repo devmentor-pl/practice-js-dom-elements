@@ -29,9 +29,7 @@ btn.style.padding = buttonSettings.css.padding;
 btn.style.color = buttonSettings.css.color;
 }
 
-for (prop in buttonSettings.text) {
-    btn.innerText = buttonSettings.text;
-}
+btn.innerText = buttonSettings.text;
 
 classElement.appendChild(btn);
 }
