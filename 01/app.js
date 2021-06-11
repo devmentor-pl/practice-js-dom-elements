@@ -1,10 +1,10 @@
 console.log('DOM');
 
-const liEl = document.querySelector ('.comments__item.comments__item--newest');
+const liEl = document.querySelector('.comments__item.comments__item--newest');
 
 
-if(liEl) {
+if (liEl) {
 
     const dataEl = liEl.querySelectorAll("[data-info]");
-    console.log(dataEl);
+    console.log(dataEl.length);
 }
