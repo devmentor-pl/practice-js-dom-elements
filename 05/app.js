@@ -12,14 +12,12 @@ if (curr) {
 
     // dla wszystkich elementów, które są rodzeństwem dla elementu o klasie .js-curr dodaj klasę .siblings (wykorzystaj pętlę)
 
-    const parent = sectionElement.parentElement.children;
-
-    for (let i = 0; i < parent.length; i++) {
-        if (!parent[i].classList.contains('js-curr')) {
-            sectionElement.parentElement.children[i].classList.add('.sibling');
-        };
-        console.log(sectionElement.parentElement.children[i]);
-    }
+    const allElements = document.querySelector('.articles__item')
+    const arrElements = [allElements];
+    arrElements.forEach(function (item) {
+        item.classList.add('.siblings');
+        console.log(arrElements);
+    })
 
     // dla następnego elementu o klasie .article względem rodzica dla elementu o klasie .js-curr dodaj atrybut title o wartości nextElementSibling.
 
