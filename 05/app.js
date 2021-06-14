@@ -6,7 +6,9 @@ btn.textContent = 'usuń z koszyka';
 
 const childrenList = [...curr.parentNode.children];
 for (let i = 0; i < childrenList.length; i++) {
-    childrenList[i].classList.add('siblings');
+    if (childrenList[i] !== curr) {
+        childrenList[i].classList.add('siblings');
+    }
 }
 
 const firstArticle = curr.parentNode;
