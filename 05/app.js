@@ -12,12 +12,20 @@ curr.parentElement.appendChild(deleteButton);
 // dla wszystkich elementów, które są rodzeństwem dla elementu o klasie .js-curr dodaj klasę .siblings (wykorzystaj pętlę)
 
 const siblingList = [];
-let sibling = curr.parentNode.firstChild;
+/*let sibling = curr.parentNode.firstChild;
 while (sibling) {
   if (sibling.nodeType === 1 && sibling !== curr) {
     siblingList.push(sibling);
   }
   sibling = sibling.nextSibling;
+}*/
+
+let sibling = curr.parentNode.firstElementChild;
+while (sibling) {
+  if (sibling !== curr) {
+    siblingList.push(sibling);
+  }
+  sibling = sibling.nextElementSibling;
 }
 
 // dlaczego musimy sprawdzic czy sibling nie jest nodeType === 1 ?
