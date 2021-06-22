@@ -17,32 +17,16 @@ const newButton = document.createElement("button");
 const parentForButton = document.querySelector(".parent-for-button");
 console.log(parentForButton);
 
-/*if (newButton) {
-  for (const set in buttonSettings) {
-    console.log(set);
-    newButton.innerHTML = buttonSettings[set];
-    for (const setting in buttonSettings.attr) {
-      newButton.setAttribute(setting, buttonSettings.attr[setting]);
-    }
-
-    for (const setting in buttonSettings.css) {
-      newButton.style[setting] = buttonSettings.css[setting];
-    }
-  }
-}*/
-
 if (newButton) {
   for (const set in buttonSettings) {
-    if (typeof set === "string") {
+    if (typeof buttonSettings[set] === "string") {
       newButton.innerHTML = buttonSettings[set];
-      for (const setting in buttonSettings.attr) {
+    }
+    for (const setting in buttonSettings[set]) {
+      if (set === "attr") {
         newButton.setAttribute(setting, buttonSettings.attr[setting]);
-      }
-
-      for (const setting in buttonSettings.css) {
-        if (typeof setting === "string") {
-          newButton.style[setting] = buttonSettings.css[setting];
-        }
+      } else {
+        newButton.style[setting] = buttonSettings.css[setting];
       }
     }
   }
