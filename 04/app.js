@@ -7,13 +7,14 @@ const menuItems = [
     {text: 'kontakt', url: '/contact'},
 ];
 
-// Bez forEach
-// dodanie ul do nav
+// Bez forEach =================================================
+
 const navigation = document.querySelector('nav')
 const unOrderedList = document.createElement('ul');
-const liElOne = document.createElement('li');
 
 
+
+// const liElOne = document.createElement('li');
 
 // if(navigation) {
 //     navigation.appendChild( unOrderedList )
@@ -49,22 +50,26 @@ const liElOne = document.createElement('li');
 
 // }
 
-// z ForEach 
 
-const unOrderedListSecond = document.createElement('ul');
-navigation.appendChild(unOrderedListSecond);
 
-if (unOrderedListSecond) {
+// z ForEach ====================================
+
+
+navigation.appendChild(unOrderedList);
+
+if (unOrderedList) {
 
     menuItems.forEach((item) => {
         const liElement = document.createElement('li');
-        liElement.setAttribute('href', `${item.url}`)
-        liElement.textContent = `${item.text}`;
-        unOrderedListSecond.appendChild(liElement);
-        
-    })
-    
+        if (liElement && !liElement.hasAttribute('href')) {
+            liElement.setAttribute('href', `${item.url}`)
+            liElement.textContent = `${item.text}`;
+            unOrderedList.appendChild(liElement);  
+        }  
+    })  
 }
+
+
 
 
 
