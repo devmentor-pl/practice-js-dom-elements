@@ -1,6 +1,6 @@
 console.log("DOM");
 const comment = document.querySelector(
-  ".comments__item, .comments__item--newest"
+  ".comments__item.comments__item--newest"
 );
 console.log(comment);
 
