@@ -6,18 +6,19 @@ const curr = document.querySelector('.js-curr');
 if (curr) {
     const sectionElement = curr.parentElement;
     const newButton = document.createElement('button');
-    newButton.textContent = 'Usuń z koszyka';
+    newButton.innerText = 'Usuń z koszyka';
     sectionElement.appendChild(newButton);
     console.log(newButton);
 
     // dla wszystkich elementów, które są rodzeństwem dla elementu o klasie .js-curr dodaj klasę .siblings (wykorzystaj pętlę)
 
-    const allElements = document.querySelector('.articles__item')
-    const arrElements = [allElements];
-    arrElements.forEach(function (item) {
-        item.classList.add('.siblings');
-        console.log(arrElements);
-    })
+    const allElements = curr.parentElement.children;
+    for (let i = 0; i < allElements.length; i++) {
+
+        if (!(allElements[i].classList.contains('js-curr'))) {
+            allElements[i].classList.add('siblings')
+        }
+    }
 
     // dla następnego elementu o klasie .article względem rodzica dla elementu o klasie .js-curr dodaj atrybut title o wartości nextElementSibling.
 
