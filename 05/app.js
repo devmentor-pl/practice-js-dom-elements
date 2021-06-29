@@ -15,6 +15,7 @@ parentEl.appendChild(btnReset);
 if (parentEl.hasChildNodes()) {
   const arr = [...parentEl.children];
   arr.forEach(element => {
+    if(!element.classList.contains('js-curr'))
     element.classList.add('siblings');
   })
 }
