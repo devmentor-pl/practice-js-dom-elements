@@ -57,17 +57,17 @@ const unOrderedList = document.createElement('ul');
 
 navigation.appendChild(unOrderedList);
 
-if (unOrderedList) {
 
-    menuItems.forEach((item) => {
-        const liElement = document.createElement('li');
-        if (liElement && !liElement.hasAttribute('href')) {
-            liElement.setAttribute('href', `${item.url}`)
-            liElement.textContent = `${item.text}`;
-            unOrderedList.appendChild(liElement);  
-        }  
-    })  
-}
+
+menuItems.forEach((item) => {
+    const liElement = document.createElement('li');
+    if(!liElement.hasAttribute('href')) {
+        liElement.setAttribute('href', `${item.url}`)
+        liElement.textContent = `${item.text}`;
+        unOrderedList.appendChild(liElement);  
+    }  
+})  
+
 
 
 
