@@ -29,9 +29,12 @@ if(parentElement) {
     btn.textContent = text;
     // dodanie klasy
     btn.classList.add(attr.className);
-    // dodanie atrybutu
-    btn.setAttribute('title', attr.title);
+    // dodanie atrybutów
+    for (let attrName in attr) {
+        btn.setAttribute(attrName, attr[attrName])
+    }
 
+    
     // dodanie styli
     for (let key in css) {
         btn.style.setProperty(key, css[key])
