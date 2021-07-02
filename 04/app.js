@@ -61,10 +61,14 @@ navigation.appendChild(unOrderedList);
 
 menuItems.forEach((item) => {
     const liElement = document.createElement('li');
-    if(!liElement.hasAttribute('href')) {
-        liElement.setAttribute('href', `${item.url}`)
-        liElement.textContent = `${item.text}`;
-        unOrderedList.appendChild(liElement);  
+    unOrderedList.appendChild(liElement);
+    const linkElement = document.createElement('a');
+    liElement.appendChild(linkElement);
+    
+    if(!linkElement.hasAttribute('href')) {
+        linkElement.setAttribute('href', `${item.url}`)
+        linkElement.textContent = `${item.text}`;
+          
     }  
 })  
 
