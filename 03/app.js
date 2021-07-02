@@ -19,19 +19,16 @@ const parentElement = document.querySelector('.parent-for-button');
 if(parentElement) {
     // 2 stwórz element button
     const btn = document.createElement('button');
-    
     // pobierz potrzebne właściwości, content i atrybuty elementu
-    let attr = buttonSettings.attr
-    let css = buttonSettings.css
-    let text = buttonSettings.text
-    
+    let text = buttonSettings.text;
+    let attr = buttonSettings.attr;
+    let css = buttonSettings.css;
     // dodanie contentu
     btn.textContent = text;
-    // dodanie klasy
-    btn.classList.add(attr.className);
-    // dodanie atrybutów
-    for (let attrName in attr) {
-        btn.setAttribute(attrName, attr[attrName])
+
+    for (let attrName in attr) {  
+        btn.setAttribute('title', attr[attrName])
+        btn.classList.add(attr.className);
     }
 
     
