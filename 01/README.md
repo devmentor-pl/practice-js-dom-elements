@@ -1,15 +1,14 @@
-
 > :star: *Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `s1e05-js-dom-elements` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/) oraz posiadaczy [kursu JavaScript](https://devmentor.pl/p/javascript-for-beginners/)) lub na [dedykowanej grupie fb](https://www.facebook.com/groups/155234921740033). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/).*
 
 &nbsp;
 
 # `#01` JavaScript: Elementy DOM
 
-Wyszukaj element, który posiada dwie klasy tj. `.comments__item` oraz `.comments__item--newest`.
+Wyszukaj element, który ma dwie klasy: `.comments__item` oraz `.comments__item--newest`.
 
-Następnie przeszukaj ten element względem znaczników, które posiadają atrybut `data-info`.
+Następnie poszukaj w nim elementów, które posiadają atrybut `data-info`.
 
-Wyświetl w konsoli ile tych elementów zostało znalezionych.
+Wyświetl w konsoli, ile takich elementów zostało znalezionych.
 
 
 &nbsp;
