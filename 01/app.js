@@ -6,4 +6,6 @@ const comment = document.querySelector(
 
 const infos = comment.querySelectorAll("[data-info");
 
-console.log(infos.length);
+if (infos !== null) {
+  console.log(infos.length);
+}

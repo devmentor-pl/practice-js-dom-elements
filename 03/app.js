@@ -22,7 +22,7 @@ for (const key in buttonSettings.attr) {
 }
 
 for (const key in buttonSettings.css) {
-  button.style.key = buttonSettings.css[key];
+  button.style[key] = buttonSettings.css[key];
 }
 
 button.textContent = buttonSettings.text;
