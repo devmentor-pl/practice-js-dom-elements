@@ -16,16 +16,8 @@ const li2 = document.createElement('li');
 const li3 = document.createElement('li');
 
 const a1 = document.createElement('a');
-a1.setAttribute('href', '/');
-a1.textContent = 'start';
-
 const a2 = document.createElement('a');
-a2.setAttribute('href', '/gallery');
-a2.textContent = 'gallery';
-
 const a3 = document.createElement('a');
-a3.setAttribute('href', '/contact');
-a3.textContent = 'contact';
 
 nav.appendChild(ul);
 
@@ -36,3 +28,10 @@ ul.appendChild(li3);
 li1.appendChild(a1);
 li2.appendChild(a2);
 li3.appendChild(a3);
+
+const everyLink = document.querySelectorAll('li > a');
+
+[...everyLink].forEach((item, index) => {
+	item.textContent = menuItems[index].text;
+	item.setAttribute('href', menuItems[index].url);
+});
