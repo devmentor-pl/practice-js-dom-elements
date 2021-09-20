@@ -10,24 +10,14 @@ const menuItems = [
 const nav = document.querySelector('nav');
 
 const ul = document.createElement('ul');
-
-const li1 = document.createElement('li');
-const li2 = document.createElement('li');
-const li3 = document.createElement('li');
-
-const a1 = document.createElement('a');
-const a2 = document.createElement('a');
-const a3 = document.createElement('a');
-
 nav.appendChild(ul);
 
-ul.appendChild(li1);
-ul.appendChild(li2);
-ul.appendChild(li3);
-
-li1.appendChild(a1);
-li2.appendChild(a2);
-li3.appendChild(a3);
+menuItems.forEach(() => {
+	const li = document.createElement('li');
+	ul.appendChild(li);
+	const a = document.createElement('a');
+	li.appendChild(a);
+});
 
 const everyLink = document.querySelectorAll('li > a');
 
