@@ -18,12 +18,12 @@ const btn = document.createElement('button');
 btn.setAttribute('class', buttonSettings.attr.className);
 btn.setAttribute('title', buttonSettings.attr.title);
 
-for (const item in buttonSettings) {
-	btn.style.border = buttonSettings[item].border;
-	btn.style.padding = buttonSettings[item].padding;
-	btn.style.color = buttonSettings[item].color;
+for (const item in buttonSettings.css) {
+	btn.style.border = item;
+	btn.style.padding = item;
+	btn.style.color = item;
 
-	btn.innerText = buttonSettings[item];
+	btn.innerText = buttonSettings.text;
 }
 
 sectionParent.appendChild(btn);
