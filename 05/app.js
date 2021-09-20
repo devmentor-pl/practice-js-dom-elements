@@ -7,12 +7,11 @@ btnSibling.textContent = 'Usuń z koszyka';
 curr.parentNode.insertBefore(btnSibling, curr.nextSibling);
 
 // 2.
-function newClassForSiblings(element, parent) {
-	const children = [...parent.children];
-	const filteredSiblings = children.filter((child) => child !== element);
-	filteredSiblings.map((el) => el.classList.add('siblings'));
+function newClassForSiblings(element, children) {
+	const filteredSiblings = [...children].filter((child) => child !== element);
+	filteredSiblings.forEach((el) => el.classList.add('siblings'));
 }
-newClassForSiblings(curr, curr.parentElement);
+newClassForSiblings(curr, curr.parentElement.children);
 
 // 3.
 curr.parentElement.nextElementSibling.setAttribute(
@@ -39,7 +38,6 @@ const newArticle = document.createElement('article');
 sectionParent.parentNode.insertBefore(newArticle, sectionParent);
 
 const newSectionParent = curr.parentElement.previousElementSibling;
-console.log(newSectionParent);
 
 const newHeading = document.createElement('h2');
 newHeading.textContent = 'JS new heading';
