@@ -20,8 +20,6 @@ btn.setAttribute('title', buttonSettings.attr.title);
 
 for (const item in buttonSettings.css) {
 	btn.style[item] = buttonSettings.css[item];
-	btn.style[item] = buttonSettings.css[item];
-	btn.style[item] = buttonSettings.css[item];
 }
 
 btn.innerText = buttonSettings.text;
