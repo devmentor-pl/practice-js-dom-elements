@@ -1,9 +1,7 @@
 const dataUrl = document.querySelectorAll('[data-url]');
 
-if(dataUrl) {
-    dataUrl.forEach(function(element) { 
+dataUrl.forEach(function(element) { 
 
-        let link = element.getAttribute('data-url');
-        element.setAttribute('href', link);
-    });
-}
+    let link = element.getAttribute('data-url');
+    element.setAttribute('href', link);
+});

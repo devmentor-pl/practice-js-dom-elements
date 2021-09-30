@@ -4,7 +4,7 @@ const secondBtn = curr.cloneNode(true);
 curr.parentElement.appendChild(secondBtn);
 secondBtn.innerText = 'Usuń z koszyka';
 
-for (let i=0; i<curr.parentElement.children.length; i++) { //co wyskakuje gdy i<=? widziałem jeden element więcej i ostatni jest undefined
+for (let i=0; i<curr.parentElement.children.length; i++) {
     curr.parentElement.children[i].classList.add('siblings');
 }
 
