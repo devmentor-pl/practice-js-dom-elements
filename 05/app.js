@@ -12,9 +12,10 @@ if (curr) {
 
 // second task
 const currParentSectionNode = currParentArticle.hasChildNodes();
-const children = currParentArticle.children;
+let children = currParentArticle.children;
 for (let i = 0; i < children.length; i++) {
   children[i].classList.add("siblings");
+  curr.classList.remove("siblings");
 }
 
 // third task

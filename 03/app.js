@@ -8,7 +8,11 @@ const buttonSettings = {
   css: {
     border: "1px solid #336699",
     padding: "5px 20px",
-    color: "#444",
+    color: "#555",
+    fontSize: "16px",
+    fontWeight: "600",
+    borderRadius: "5px",
+    backgroundColor: "#fff",
   },
   text: "Click me!",
 };
@@ -22,9 +26,14 @@ if (sectionElement) {
   btn.setAttribute("title", buttonSettings["attr"]["title"]);
 
   //    styles
-  btn.style.border = buttonSettings["css"]["border"];
-  btn.style.padding = buttonSettings["css"]["padding"];
-  btn.style.color = buttonSettings["css"]["color"];
+  // btn.style.border = buttonSettings["css"]["border"];
+  // btn.style.padding = buttonSettings["css"]["padding"];
+  // btn.style.color = buttonSettings["css"]["color"];
+  //
+  // FOR...IN LOOP
+  for (const prop in buttonSettings["css"]) {
+    btn.style[prop] = `${buttonSettings["css"][prop]}`;
+  }
 
   //    btn content
   btn.innerText = buttonSettings["text"];
