@@ -28,9 +28,3 @@ A2List.forEach(function(value,index){
         value.setAttribute('href', menuItems[index]['url']);
         value.innerHTML = menuItems[index]['text'];
 });
-
-let names =['kate','jack','john']
-names.forEach(function(name,index){
- console.log(index);
-
-});
