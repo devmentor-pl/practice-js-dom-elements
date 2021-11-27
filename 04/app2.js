@@ -21,7 +21,7 @@ if(articleSection){
 }
 
 const A2List = document.querySelectorAll('a');
-A2List.forEach(function(value,index){
-        value.setAttribute('href', menuItems[index]['url']);
-        value.innerHTML = menuItems[index]['text'];
+A2List.forEach(function(element,index){
+        element.setAttribute('href', menuItems[index]['url']);
+        element.innerHTML = menuItems[index]['text'];
 });
