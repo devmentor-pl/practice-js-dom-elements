@@ -21,9 +21,6 @@ if(articleSection){
 }
 
 const A2List = document.querySelectorAll('a');
-const len = menuItems.length;
-console.log(len);
-
 A2List.forEach(function(value,index){
         value.setAttribute('href', menuItems[index]['url']);
         value.innerHTML = menuItems[index]['text'];
