@@ -28,7 +28,7 @@ console.log(AList);
 
 
 //Komentarz dla mnie:
-//Metoda values() zwraca nowy obiekt Array Item , który zawiera wartości dla każdego indeksu w tablicy.
+//Istnieje take metoda values() zwraca nowy obiekt Array Item , który zawiera wartości dla każdego indeksu w tablicy.
 
 // const urlArray = ['/', '/gallery', '/contact'];
 // const itemUrlArray = urlArray.values(); 
