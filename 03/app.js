@@ -20,25 +20,20 @@ const button = document.createElement('button');
 
 if(buttonParent){
     buttonParent.appendChild(button);
-}
-    if(buttonSettings.hasOwnProperty('attr')){
-    const attrArray = buttonSettings.attr;
-    console.log(attrArray);
-    for (key in attrArray){
-        button[key] = attrArray[key];
-         }
-    }
 
-    if (buttonSettings.hasOwnProperty('css')) {
-        const styleArray = buttonSettings.css
+    const attrArray = buttonSettings.attr;
+        for (key in attrArray){
+            button[key] = attrArray[key];
+            }
+
+    const styleArray = buttonSettings.css
         for(key in styleArray){
             button.style[key] = styleArray[key];
         }
-    }
 
-    if (buttonSettings.hasOwnProperty('text')){
-        button.innerText = buttonSettings['text'];
-    }
+    button.innerText = buttonSettings['text'];
+
+ }
 
     // button.className = 'btn';
     // button.title = "super button";
