@@ -5,11 +5,12 @@ const mainElement = document.querySelector('.comments__item.comments__item--newe
 if(mainElement){
     const spanList = mainElement.querySelectorAll('p > span');
     const dataInfoList = [];
-
-    spanList.forEach(function(element){
-        if(element.hasAttribute('data-info')){
-            dataInfoList.push(element);
-        }
-    })
+        if(spanList){
+        spanList.forEach(function(element){
+            if(element.hasAttribute('data-info')){
+                dataInfoList.push(element);
+            }
+        })
+    }
     console.log('Ilosc elementow, ktore posidaja atrybut data-info to: ' + dataInfoList.length);
 }
