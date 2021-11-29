@@ -27,6 +27,7 @@ AList.forEach(function(element,index){
 console.log(AList);
 
 
+
 //Komentarz dla mnie:
 //Istnieje take metoda values() zwraca nowy obiekt Array Item , który zawiera wartości dla każdego indeksu w tablicy.
 
