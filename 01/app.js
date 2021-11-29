@@ -14,3 +14,5 @@ if(mainElement){
     }
     console.log('Ilosc elementow, ktore posidaja atrybut data-info to: ' + dataInfoList.length);
 }
+
+//Mateusz komentarz: Można też było wykorzystać selektor atrybutu tj. mainElement.querySelectorAll('[data-info]');

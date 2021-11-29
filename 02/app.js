@@ -3,6 +3,7 @@ console.log('DOM');
 const mainElement = document.querySelectorAll('[data-url]');
 console.log(mainElement);
 
+if(mainElement){
 mainElement.forEach(function(element){
     const url = element.getAttribute('data-url')
     console.log(url);
@@ -10,6 +11,7 @@ mainElement.forEach(function(element){
             element.setAttribute('href', url)
         }
 })
+}
 
 
 // const aList = document.querySelectorAll('a');
