@@ -4,6 +4,7 @@ const menuItems = [
     {text: 'start', url: '/'},
     {text: 'galeria', url: '/gallery'},
     {text: 'kontakt', url: '/contact'},
+    {text: 'o nas', url: '/about'},
 ];
 
 //WERJA PIERWSZA//
@@ -31,16 +32,16 @@ const menuItems = [
 const nav = document.querySelector('nav');
 const UlElement = document.createElement('ul');
 nav.appendChild(UlElement);
-const firstLi = document.createElement('li');
-const firstA = document.createElement('a');
-firstLi.appendChild(firstA);
-UlElement.appendChild(firstLi);
-const secondLi = firstLi.cloneNode(true);
-UlElement.appendChild(secondLi);
-const lastLi = firstLi.cloneNode(true);
-UlElement.appendChild(lastLi);
+
+menuItems.forEach(function() {
+    let liEl = document.createElement('li');
+    let aEl = document.createElement('a');
+    liEl.appendChild(aEl);
+    UlElement.appendChild(liEl);
+});
+
+
 const aElements  = document.querySelectorAll('a');
-console.log(aElements);
 const urlItems = menuItems.map(a => a.url);
 aElements.forEach(function(element, index) { 
     element.setAttribute('href', urlItems[index]);
