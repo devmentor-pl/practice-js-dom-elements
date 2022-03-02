@@ -3,7 +3,7 @@ console.log('DOM');
 const aList = document.querySelectorAll(`a`);
 console.log(aList);
 if(aList) {
-    for (i = 0; i < aList.length; i++) {
+    for (let i = 0; i < aList.length; i++) {
         urls = aList[i].getAttribute(`data-url`)
         if(urls) {
         console.log(urls);
