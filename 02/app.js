@@ -6,7 +6,7 @@ if(aList) {
     for (let i = 0; i < aList.length; i++) {
         urls = aList[i].getAttribute(`data-url`)
         if(urls) {
-        console.log(urls);
+            console.log(urls);
             aList[i].setAttribute('href', urls);
             aList[i].removeAttribute('data-url');
         }
