@@ -40,7 +40,7 @@ if(navigation) {
     const newUlElement = document.createElement('ul');
     navigation.appendChild(newUlElement);
 
-    for(i = 0; i < menuItems.length; i++) {
+    for(let i = 0; i < menuItems.length; i++) {
         const newLiElement = document.createElement('li');
         newUlElement.appendChild(newLiElement);
         const newAElement = document.createElement('a');
