@@ -7,8 +7,8 @@ if(aList) {
         urls = aList[i].getAttribute(`data-url`)
         if(urls) {
         console.log(urls);
-        aList[i].setAttribute('href', urls);
-        aList[i].removeAttribute('data-url');
+            aList[i].setAttribute('href', urls);
+            aList[i].removeAttribute('data-url');
         }
     }
 }
