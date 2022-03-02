@@ -15,14 +15,14 @@ const buttonSettings = {
 
 const newButton = document.createElement('button');
 
-for (key in buttonSettings.attr) {
+for (const key in buttonSettings.attr) {
     if(key === 'className') {
         newButton.classList.add(buttonSettings.attr[key]);
     }
     else {
         //newButton.setAttribute(key, buttonSettings.attr[key]);
         newButton[key] = buttonSettings.attr[key];
-        //faktycznie działa :)
+        //faktycznie działa 
     }
 }
 
