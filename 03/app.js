@@ -20,7 +20,9 @@ for (key in buttonSettings.attr) {
         newButton.classList.add(buttonSettings.attr[key]);
     }
     else {
-        newButton.setAttribute(key, buttonSettings.attr[key]);
+        //newButton.setAttribute(key, buttonSettings.attr[key]);
+        newButton[key] = buttonSettings.attr[key];
+        //faktycznie działa :)
     }
 }
 
