@@ -22,10 +22,8 @@ if (navElement) {
     const ul = document.createElement('ul');
     navElement.appendChild(ul);
     menuItems.forEach(function (el) {
-        if (ul) {
             const li = document.createElement('li');
             li.innerHTML = `<a href="${el.url}">${el.text}</a>`;
-            document.querySelector('ul').appendChild(li);
-        };
+            document.querySelector('ul').appendChild(li)
     });
 };

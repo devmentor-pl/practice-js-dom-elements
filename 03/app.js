@@ -2,7 +2,7 @@ console.log('DOM');
 
 const buttonSettings = {
     attr: {
-        className: 'btn',
+        class: 'btn',
         title: 'super button'
     },
     css: {
@@ -15,19 +15,12 @@ const buttonSettings = {
 const parentForBtn = document.querySelector('.parent-for-button');
 if (parentForBtn) {
     const btn = document.createElement('button');
+    const { attr, css, text } = buttonSettings;
 
-    for (const value in buttonSettings) {
-        if (value === 'text') btn.innerText = `${buttonSettings[value]}`
-        const keys = buttonSettings[value];
-        for (const value in keys) {
-            if (value === 'className') btn.classList.add(keys[value]);
-            if (value === 'title') btn.setAttribute('title',keys[value]);
-            if (value === 'border') btn.style.setProperty(value,keys[value]);
-            if (value === 'padding') btn.style.setProperty(value, keys[value]);
-            if (value === 'color') btn.style.setProperty(value, keys[value]);
-        }
+    for (const attribute in attr) { btn.setAttribute(attribute, attr[attribute]) };
+    for (const style in css) { btn.style.setProperty(style, css[style]) };
+    btn.innerText = `${text}`;
 
-    }
-    parentForBtn.appendChild(btn)
+    parentForBtn.appendChild(btn);
     console.log(btn);
-}
+};
