@@ -5,7 +5,7 @@ console.log('ZAD 5');
 const curr = document.querySelector('.js-curr');
 
 
-// additionally done - add color to added elements
+// additionally done - add color for added elements
 // =====================
 
 
@@ -16,7 +16,6 @@ btnRemove.innerText = 'usuń z koszyka'
 btnRemove.style.color = 'red'
 
 const parentCurr = curr.parentElement
-console.log(parentCurr)
 parentCurr.appendChild(btnRemove)
 
 
@@ -24,32 +23,24 @@ parentCurr.appendChild(btnRemove)
 // =====================
 // one way - using querySelectorAll
 // ---------------------
-// const currElements = parentCurr.querySelectorAll('.js-curr')
-// console.log(currElements)
-// currElements.forEach(item => {
-//     console.log(item)
-//     const sibling = curr.nextElementSibling
-//     sibling.className = 'siblings'
-//     console.log(sibling)
-// })
+const currElements = parentCurr.querySelectorAll('.js-curr')
+currElements.forEach(item => {
+    const sibling = curr.nextElementSibling
+    sibling.className = 'siblings'
+})
 
 
 // two way - using children, without querySelectorAll
 // ---------------------
-const currElements = parentCurr.children
-console.log(currElements)
-for(let i=0; i<currElements.length; i++) {
-    const item = currElements[i]
-    console.log(item)
-    const jsCurr = item.className.includes('js-curr')
-    // console.log(jsCurr)
-    if(jsCurr) {
-        console.log(item)
-        const sibling = item.nextElementSibling
-        sibling.className = 'siblings'
-        console.log(sibling)
-    }
-}
+// const currElements = parentCurr.children
+// for(let i=0; i<currElements.length; i++) {
+//     const item = currElements[i]
+//     const jsCurr = item.className.includes('js-curr')
+//     if(jsCurr) {
+//           const sibling = item.nextElementSibling
+//         sibling.className = 'siblings'
+//     }
+// }
 
 
 // add attribute title = nextElementSibling
@@ -65,32 +56,26 @@ article.setAttribute('title', 'nextElementSibling')
 // =======================
 // using querySelector
 // -----------------------
-// const section = parentCurr.parentElement
-// console.log(section)
-// const lastArticle = section.lastElementChild
-// console.log(lastArticle)
-
-// const lastArticleButton = lastArticle.querySelector('.article__btn')
-// console.log(lastArticleButton)
-// const paragraph = document.createElement('p')
-// paragraph.innerText = 'added paragraph'
-// paragraph.style.color = 'red'
-// lastArticle.insertBefore(paragraph, lastArticleButton)
-
-
-// no using querySelector
-// -----------------------
 const section = parentCurr.parentElement
-console.log(section)
 const lastArticle = section.lastElementChild
-console.log(lastArticle)
 
-const lastArticleButton = lastArticle.lastElementChild
-console.log(lastArticleButton)
+const lastArticleButton = lastArticle.querySelector('.article__btn')
 const paragraph = document.createElement('p')
 paragraph.innerText = 'added paragraph'
 paragraph.style.color = 'red'
 lastArticle.insertBefore(paragraph, lastArticleButton)
+
+
+// no using querySelector
+// -----------------------
+// const section = parentCurr.parentElement
+// const lastArticle = section.lastElementChild
+
+// const lastArticleButton = lastArticle.lastElementChild
+// const paragraph = document.createElement('p')
+// paragraph.innerText = 'added paragraph'
+// paragraph.style.color = 'red'
+// lastArticle.insertBefore(paragraph, lastArticleButton)
 
 
 // add article with the same structure
