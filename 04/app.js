@@ -7,30 +7,49 @@ const menuItems = [
     { text: 'kontakt', url: '/contact' },
 ];
 
-// First solution
-const linksList = document.createElement('ul')
-const navElement = document.querySelector('nav')
-navElement.appendChild(linksList)
-const linksArray = [];
+// Second solution
 
-for (let i = 0; i < 3; i++) {
+const ulElement = document.createElement('ul')
+const navElement = document.querySelector('nav')
+navElement.appendChild(ulElement)
+
+menuItems.forEach(item => {
+
     const element = document.createElement('li');
     const link = document.createElement('a');
-    linksArray.push(link)
+
     element.appendChild(link)
-    linksList.appendChild(element)
-}
+    link.innerText = item.text;
+    link.setAttribute('href', item.url)
 
-linksArray[0].innerText = 'start'
-linksArray[0].setAttribute('href', '/')
+    navElement.appendChild(element)
 
-linksArray[1].innerText = 'galeria'
-linksArray[1].setAttribute('href', '/gallery')
-
-linksArray[2].innerText = 'kontakt'
-linksArray[2].setAttribute('href', '/contact')
+})
 
 
 
 
-// Second solution
+// First solution
+
+// const ulElement = document.createElement('ul')
+// const navElement = document.querySelector('nav')
+// navElement.appendChild(ulElement)
+// const linksArray = [];
+
+// for (let i = 0; i < 3; i++) {
+//     const element = document.createElement('li');
+//     const link = document.createElement('a');
+//     linksArray.push(link)
+//     element.appendChild(link)
+//     ulElement.appendChild(element)
+// }
+
+// linksArray[0].innerText = 'start'
+// linksArray[0].setAttribute('href', '/')
+
+// linksArray[1].innerText = 'galeria'
+// linksArray[1].setAttribute('href', '/gallery')
+
+// linksArray[2].innerText = 'kontakt'
+// linksArray[2].setAttribute('href', '/contact')
+
