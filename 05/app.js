@@ -9,7 +9,7 @@ const curr = document.querySelector('.js-curr');
 // =====================
 
 
-// add button
+// 1 add button
 // =====================
 const btnRemove = document.createElement('button')
 btnRemove.innerText = 'usuń z koszyka'
@@ -19,31 +19,20 @@ const parentCurr = curr.parentElement
 parentCurr.appendChild(btnRemove)
 
 
-// add class siblings
+// 2 add class siblings
 // =====================
-// one way - using querySelectorAll
-// ---------------------
-const currElements = parentCurr.querySelectorAll('.js-curr')
-currElements.forEach(item => {
-    const sibling = curr.nextElementSibling
-    sibling.className = 'siblings'
-})
+const currElements = parentCurr.children
+console.log(currElements)
+for(let i=0; i<currElements.length; i++) {
+    const item = currElements[i]
+    if(curr !== item) {
+        console.log(item)
+        item.classList.add('siblings')
+    }
+}
 
 
-// two way - using children, without querySelectorAll
-// ---------------------
-// const currElements = parentCurr.children
-// for(let i=0; i<currElements.length; i++) {
-//     const item = currElements[i]
-//     const jsCurr = item.className.includes('js-curr')
-//     if(jsCurr) {
-//           const sibling = item.nextElementSibling
-//         sibling.className = 'siblings'
-//     }
-// }
-
-
-// add attribute title = nextElementSibling
+// 3 add attribute title = nextElementSibling
 // ======================
 const article = parentCurr.nextElementSibling
 
@@ -52,55 +41,59 @@ const article = parentCurr.nextElementSibling
 article.setAttribute('title', 'nextElementSibling')
 
 
-// last article - add paragraph before button
+// 4 last article - add paragraph before button
 // =======================
-// using querySelector
-// -----------------------
-const section = parentCurr.parentElement
-const lastArticle = section.lastElementChild
+// const section = parentCurr.parentElement
+// const lastArticle = section.lastElementChild
+// or
+const lastArticle = parentCurr.nextElementSibling.nextElementSibling
+console.log(lastArticle)
 
-const lastArticleButton = lastArticle.querySelector('.article__btn')
+// const lastArticleButton = lastArticle.lastElementChild
+// or
+const lastArticleButton = lastArticle.children[lastArticle.children.length - 1]
+console.log(lastArticleButton)
+
 const paragraph = document.createElement('p')
 paragraph.innerText = 'added paragraph'
 paragraph.style.color = 'red'
 lastArticle.insertBefore(paragraph, lastArticleButton)
 
 
-// no using querySelector
-// -----------------------
-// const section = parentCurr.parentElement
-// const lastArticle = section.lastElementChild
-
-// const lastArticleButton = lastArticle.lastElementChild
-// const paragraph = document.createElement('p')
-// paragraph.innerText = 'added paragraph'
-// paragraph.style.color = 'red'
-// lastArticle.insertBefore(paragraph, lastArticleButton)
-
-
-// add article with the same structure
+// 5 add article with the same structure - użyto cloneNode 
+// lepszy i krótszy sposób
 // =======================
-const articleFirst = document.createElement('article')
-articleFirst.style.color = 'red'
+const articleFirst = curr.parentElement.cloneNode(true)
+curr.parentElement.parentElement.insertBefore(articleFirst, curr.parentElement)
 
-const h1 = document.createElement('h1')
-const p = document.createElement('p')
-const button = document.createElement('button')
+// added additionally for color & real subject :)
+curr.parentElement.previousElementSibling.style.color = 'red'
+curr.parentElement.parentElement.firstElementChild.firstElementChild.innerText = 'Podstawy JS'
 
-h1.className = 'article__title'
-h1.innerText = 'JS - Podstawy'
 
-p.className = 'article__description'
-p.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo quibusdam, nemo neque consequuntur pariatur totam? Facere quaerat molestias hic.'
+// old
+// ---------------------
+// const articleFirst = document.createElement('article')
+// articleFirst.style.color = 'red'
 
-button.className = 'article__btn'
-button.textContent = 'Kupuję!'
+// const h1 = document.createElement('h1')
+// const p = document.createElement('p')
+// const button = document.createElement('button')
 
-articleFirst.appendChild(h1)
-articleFirst.appendChild(p)
-articleFirst.appendChild(button)
+// h1.className = 'article__title'
+// h1.innerText = 'JS - Podstawy'
 
-section.insertBefore(articleFirst, parentCurr)
+// p.className = 'article__description'
+// p.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo quibusdam, nemo neque consequuntur pariatur totam? Facere quaerat molestias hic.'
+
+// button.className = 'article__btn'
+// button.textContent = 'Kupuję!'
+
+// articleFirst.appendChild(h1)
+// articleFirst.appendChild(p)
+// articleFirst.appendChild(button)
+
+// section.insertBefore(articleFirst, parentCurr)
 
 
 
