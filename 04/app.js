@@ -15,8 +15,8 @@ if (elementNav) {
     elementNav.appendChild(elementUl);
 
     menuItems.forEach(function (element) {
-        // console.log(element);
-        // console.log(index);
+       
+        
 
         const objectFromMenuItems = element;
         console.log(objectFromMenuItems);
