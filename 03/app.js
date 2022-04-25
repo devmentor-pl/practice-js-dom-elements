@@ -15,31 +15,18 @@ const buttonSettings = {
 
 const buttonParent = document.querySelector('.parent-for-button');
 
-if(buttonParent) {
-    const btnEl = document.createElement('button');
-    buttonParent.appendChild(btnEl);
-    for(keys in buttonSettings) {
-        const value = buttonSettings[keys];
-        if(keys === 'text') {
-            btnEl.textContent = value;
-        }
-        for(keys in value) {
-            if(keys === 'className') {
-                btnEl.classList.add(value[keys]);
-            }
-            else if(keys === 'title') {
-                btnEl.setAttribute('title', value[keys]);
-            }
-            else if(keys === 'border') {
-                btnEl.style.border = value[keys];
-            }
-            else if(keys === 'padding') {
-                btnEl.style.padding = value[keys];
-            }
-            else if(keys === 'color') {
-                btnEl.style.color = value[keys];
-            }
-        }
+const buttonEl = document.createElement('button');
+buttonParent.appendChild(buttonEl);
 
-    }
+for(const key in buttonSettings.attr) {
+    const value = buttonSettings.attr[key];
+    buttonEl[key] = value;
 }
+
+for(const key in buttonSettings.css) {
+    const value = buttonSettings.css[key];
+    buttonEl.style[key] = value;
+}
+
+buttonEl.innerText = buttonSettings.text;
+
