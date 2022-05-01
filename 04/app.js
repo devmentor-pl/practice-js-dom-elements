@@ -8,23 +8,6 @@ const menuItems = [
     {text: 'kontakt', url: '/contact'},
 ];
 
-
-// const nav1=document.createElement('nav')
-// document.body.appendChild(nav1)
-// const ul1=document.createElement('ul')
-// nav1.appendChild(ul1)
-
-// const li=document.createElement('li')
-// ul1.appendChild(li)
-// const a=document.createElement('a')
-// li.appendChild(a)
-// a.innerHTML=menuItems[0].text
-// a.href=menuItems[0].url
-
-
-
-
-
 const nav=document.createElement('nav')
 document.body.appendChild(nav)
 const ul=document.createElement('ul')
