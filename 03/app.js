@@ -19,9 +19,6 @@ console.log(button.innerHTML)
 for (const group in buttonSettings){
     if(typeof buttonSettings[group] === 'object'){
         for (const value in buttonSettings[group]){
-            // console.log(group)
-            // console.log(value)
-            // console.log(buttonSettings[group][value])
             if(group === 'attr'){
                 button.setAttribute(value, buttonSettings[group][value])
             }else if(group ==='css'){
