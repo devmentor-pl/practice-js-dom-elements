@@ -29,3 +29,11 @@ const siblingsArticle = currParent.nextElementSibling
 if(siblingsArticle.hasAttribute('class') && siblingsArticle.getAttribute('class').includes('article')){
     siblingsArticle.setAttribute('title', 'nextElementSibling')
 } 
+
+//4
+
+const newP = document.createElement('p')
+const lastArticle = currParent.parentElement.lastElementChild
+const pInLastArticle = currParent.parentElement.lastElementChild.lastElementChild
+lastArticle.insertBefore(newP, pInLastArticle)
+
