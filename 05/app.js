@@ -37,3 +37,7 @@ const lastArticle = currParent.parentElement.lastElementChild
 const pInLastArticle = currParent.parentElement.lastElementChild.lastElementChild
 lastArticle.insertBefore(newP, pInLastArticle)
 
+//5
+
+const cloneArticle = currParent.cloneNode(true)
+currParent.parentElement.insertBefore(cloneArticle, currParent.parentElement.firstElementChild)
