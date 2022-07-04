@@ -20,7 +20,11 @@ const newP = lastArticle.lastElementChild.previousElementSibling.cloneNode();
 lastArticle.insertBefore(newP, lastArticle.lastElementChild);
 
 // 5
-const list = curr.parentElement.parentElement
-const newArticle = list.firstElementChild.children
+
+const list = curr.parentElement;
+const newArticle = curr.parentElement.cloneNode();
+
+console.log(newArticle);
+list.parentElement.insertBefore(newArticle, list);
 
 

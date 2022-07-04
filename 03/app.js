@@ -22,18 +22,15 @@ const buttonSettings = {
 // button.innerText = buttonSettings.text;
 
 if (button) {
-	for (const el in buttonSettings) {
-		if (el === "attr") {
-			button.setAttribute("class", buttonSettings[el].className);
-			button.setAttribute("title", buttonSettings[el].title);
-		} else if (el === "css") {
-			button.style.border = buttonSettings[el].border;
-			button.style.padding = buttonSettings[el].padding;
-			button.style.color = buttonSettings[el].color;
-		} else if (el === "text") {
-			button.innerText = buttonSettings[el];
-		}
+	for (const el in buttonSettings.attr) {
+		const attribute = buttonSettings.attr[el];
+		button[el] = attribute;
 	}
+	for (const el in buttonSettings.css) {
+		const css = buttonSettings.css[el];
+		button.style[el] = css;
+	}
+	button.innerHTML = buttonSettings.text;
 }
 
 section.appendChild(button);
