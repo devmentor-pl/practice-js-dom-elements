@@ -10,5 +10,6 @@ const secondClass = document.getElementsByClassName('.comments__item--newest');
 console.log(secondClass);
 
 
-
+const dataList = document.querySelectorAll ('span');
+console.log (dataList.length);
 
