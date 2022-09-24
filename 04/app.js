@@ -7,6 +7,20 @@ const menuItems = [
     {text: 'kontakt', url: '/contact'},
 ];
 
+
+menuItems.forEach(consoleItem);
+
+function consoleItem (item,index,arr){
+    console.log(item);
+}
+
+
+
+
+
+
+
+
 //Rozwiązanie z JS
 
 const ulElement = document.querySelector('ul');
