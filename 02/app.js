@@ -23,14 +23,5 @@ const dataAtrributeStack = arr[2].setAttribute('href' , arr[02].dataset.url)
 
 
 
-/*4.Sprawdzenie,czy każdy z linków działa prawidłowo,czyli czy
-przekierowuje do odpowiedniej strony.
-Ostatni element na liście nie zawiera przekierowania.*/
-
-function checkFunction () {
-    console.log('Wszystkie linki działają prawidłowo');
-}
-
-checkFunction();
 
 
