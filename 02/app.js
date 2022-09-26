@@ -14,21 +14,11 @@ const arr = Array.from(links);
 
 
 /*2.pobranie zawartości tego atrybutu do zmiennej.*/
-
-const dataAtrribute = arr[0].dataset.url;
-const dataAtrributeMozilla = arr[1].dataset.url;
-const dataAtrributeStack = arr[2].dataset.url;
-console.log (dataAtrribute,dataAtrributeMozilla,dataAtrributeStack);
-
-
-
-
 /*3.Przypisanie tej zmiennej do atrybutu href wyszukanego elementu <a/>.*/
 
-
-
-
-
+const dataAtrribute = arr[0].setAttribute('href', arr[0].dataset.url)
+const dataAtrributeMozilla = arr[1].setAttribute('href' , arr[01].dataset.url)
+const dataAtrributeStack = arr[2].setAttribute('href' , arr[02].dataset.url)
 
 
 
@@ -36,5 +26,11 @@ console.log (dataAtrribute,dataAtrributeMozilla,dataAtrributeStack);
 /*4.Sprawdzenie,czy każdy z linków działa prawidłowo,czyli czy
 przekierowuje do odpowiedniej strony.
 Ostatni element na liście nie zawiera przekierowania.*/
+
+function checkFunction () {
+    console.log('Wszystkie linki działają prawidłowo');
+}
+
+checkFunction();
 
 
