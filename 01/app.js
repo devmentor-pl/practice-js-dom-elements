@@ -1,15 +1,10 @@
 console.log ('DOM');
 
-const classElement = document.querySelector('.comments');
-console.log (classElement);
+const el = document.querySelector('.comments__item.comments__item--newest');
+console.log(el);
 
-const firstClass = document.getElementsByClassName('.comments__item');
-console.log (firstClass);
-
-const secondClass = document.getElementsByClassName('.comments__item--newest');
-console.log(secondClass);
+const elData = document.querySelectorAll('[data-info]');
+console.log(elData);
 
 
-const dataList = document.querySelectorAll ('span');
-console.log (dataList.length);
 

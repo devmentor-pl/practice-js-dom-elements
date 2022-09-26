@@ -17,10 +17,6 @@ function consoleItem (item,index,arr){
 
 
 
-
-
-
-
 //Rozwiązanie z JS
 
 const ulElement = document.querySelector('ul');
