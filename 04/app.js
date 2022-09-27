@@ -11,6 +11,7 @@ const menuItems = [
 menuItems.forEach(consoleItem);
 
 function consoleItem (item,index,arr){
+const newUl = document.createElement('ul');
     console.log(item);
 }
 
