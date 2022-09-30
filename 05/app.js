@@ -60,6 +60,12 @@ if(select) {
 
 /*5.Dodaj kolejny artykuł na początku listy , o takiej samej strukturze co pozostałe artykuły.*/
 
+const newArticle = document.querySelector('article')
+if(newArticle) {
+    const nextArticle = newArticle.cloneNode(true);
+    curr.parentElement.appendChild(nextArticle);
+}
+console.log(newArticle);
 
 
 
