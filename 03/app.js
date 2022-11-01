@@ -12,3 +12,5 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+// const newButton = document.createElement("button");
