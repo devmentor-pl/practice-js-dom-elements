@@ -7,9 +7,10 @@ if (curr) {
   curr.parentElement.appendChild(deleteBtn);
 
   const addClasses = Array.from(curr.parentElement.children).forEach(function (el) {
-    el.classList.add("siblings");
+    if (!(el.className.includes("js-curr"))) {
+      el.classList.add("siblings")
+    }
   });
-
   const titleNextElement = curr.parentElement.nextElementSibling.dataset.title = "nextElementSibling";
 
   const mainArticle = curr.parentElement.parentElement;

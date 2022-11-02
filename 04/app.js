@@ -15,10 +15,21 @@ const menuItems = [{
     },
 ];
 
+const navEl = document.querySelector("nav");
+const ulEl = document.createElement("ul");
+navEl.appendChild(ulEl);
 
 
-
-
+menuItems.forEach(function (el) {
+    const text = el.text;
+    const url = el.url;
+    const liUlEl = document.createElement("li");
+    const ulElA = document.createElement("a");
+    const href = ulElA.setAttribute("href", url);
+    ulElA.innerText = text;
+    ulEl.appendChild(liUlEl);
+    liUlEl.appendChild(ulElA)
+});
 
 
 // const navEl = document.querySelector("nav");
