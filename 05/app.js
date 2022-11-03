@@ -7,7 +7,10 @@ if (curr) {
   curr.parentElement.appendChild(deleteBtn);
 
   const addClasses = Array.from(curr.parentElement.children).forEach(function (el) {
-    if (!(el.className.includes("js-curr"))) {
+    // if (!(el.className.includes("js-curr"))) {
+    //   el.classList.add("siblings")
+    // }
+    if (el !== curr) {
       el.classList.add("siblings")
     }
   });

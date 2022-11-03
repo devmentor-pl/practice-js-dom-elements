@@ -17,19 +17,18 @@ const newButton = document.createElement("button");
 const section = document.querySelector(".parent-for-button");
 
 
-const objectToArray = function (object) {
-    let arrFromObject = [];
-    for (const key in object) {
-        const value = object[key];
-        arrFromObject = arrFromObject.concat(value);
-    }
-    return arrFromObject;
+for (const key in buttonSettings.attr) {
+    const value = buttonSettings.attr[key];
+    newButton.setAttribute(key, value)
 }
-const arrFromObject = objectToArray(buttonSettings);
-
-for (const key in arrFromObject) {
-
+for (const key in buttonSettings.css) {
+    const value = buttonSettings.css[key];
+    newButton.style[key] = value;
 }
+
+const txtBtn = buttonSettings.text;
+newButton.innerText = txtBtn;
+
 section.appendChild(newButton)
 
 
@@ -38,6 +37,17 @@ section.appendChild(newButton)
 
 
 
+
+
+// const objectToArray = function (object) {
+//     let arrFromObject = [];
+//     for (const key in object) {
+//         const value = object[key];
+//         arrFromObject = arrFromObject.concat(value);
+//     }
+//     return arrFromObject;
+// }
+// const arrFromObject = objectToArray(buttonSettings);
 
 
 // const getKeys = function (arr, num) {
@@ -53,9 +63,10 @@ section.appendChild(newButton)
 // newButton.setAttribute(setKey[0], setValues[0]);
 // newButton.setAttribute(setKey[1], setValues[1]);
 
-// for(const key in )
-
-
+//for(const key in arrFromObject){
+// 
+//}
+// section.appendChild(newButton)
 
 
 
