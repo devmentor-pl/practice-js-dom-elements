@@ -10,4 +10,4 @@ data.forEach(function(element, index) {
     element.textContent = data[index];
 });
 
-console.log(data.length);
+console.log( `Liczba elementów o atrybucie "data-info" wynosi: ${data.length}`);
