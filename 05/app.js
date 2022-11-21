@@ -28,4 +28,5 @@ oldBtn = articleEl4.insertBefore(newParagraph, oldBtn);
 
 const newArticleEl = articleEl1.cloneNode(true);
 articles.appendChild(newArticleEl);
+articles.insertBefore(newArticleEl, articleEl1);
 
