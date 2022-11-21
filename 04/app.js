@@ -29,3 +29,30 @@ aElItems.forEach(function(element, index) {
     element.textContent = menuItems[index]['text'];
 })
 
+// const navEL = document.querySelector('nav');
+
+// if(navEL) {
+
+//     const ulEL = document.createElement('ul')
+
+//     if(ulEL) {
+
+//         const liEl1 = document.createElement('li');
+//         const liEl2 = document.createElement('li');
+//         const liEl3 = document.createElement('li');
+
+//         liEl1.setAttribute('href' , '/');
+//         liEl2.setAttribute('href' , '/gallery');
+//         liEl3.setAttribute('href' , '/contact');
+
+//         liEl1.textContent = 'start'
+//         liEl2.textContent = 'gallery'
+//         liEl3.textContent = 'contact'
+
+//         ulEL.appendChild(liEl1);
+//         ulEL.appendChild(liEl2);
+//         ulEL.appendChild(liEl3);
+//     }
+
+//     navEL.appendChild(ulEL)
+// }
