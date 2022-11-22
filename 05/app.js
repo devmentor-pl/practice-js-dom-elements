@@ -12,6 +12,7 @@ const array = [...articles];
 
 array.forEach(function(item) {
     item.classList.add('siblings');
+    curr.classList.remove('siblings');
 })
 
 const articleEl2 = curr.parentNode;
