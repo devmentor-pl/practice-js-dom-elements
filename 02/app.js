@@ -1,23 +1,17 @@
 const linkList = document.querySelectorAll('[data-url]');
 const attributeList = [];
 const a = [...document.querySelectorAll('a')];
-let count = 0;
 
 linkList.forEach(function(item) {
     attributeList.push(item.getAttribute('data-url'))
 })
 
-a.forEach(function(item){
+a.forEach(function(item, i){
     
-    if(attributeList[count] === undefined) {
+    if(attributeList[i] === undefined) {
         item.setAttribute('href', '#');
     }
     else {
-        item.setAttribute('href', attributeList[count]);
+        item.setAttribute('href', attributeList[i]);
     }
-    count++;
 })
-
-// for(let i = 0; i < attributeList.length; i++) {
-//     a[i].setAttribute('href', attributeList[i])
-// }
