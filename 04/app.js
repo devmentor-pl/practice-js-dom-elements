@@ -37,17 +37,13 @@ if (ul) {
 	children[2].appendChild(aThird);*/
 
 	/*rozwiązanie z pętlą */
-	let li, a;
-	for (let i = 1; i <= 3; i++) {
-		li = document.createElement('li');
-		a = document.createElement('a');
+
+	for (let i = 0; i < menuItems.length; i++) {
+		const li = document.createElement('li');
+		const a = document.createElement('a');
+		a.setAttribute('href', menuItems[i]['url']);
+		a.innerText = menuItems[i]['text'];
 		ul.appendChild(li);
 		li.appendChild(a);
 	}
-
-	const aLinks = ul.querySelectorAll('a');
-	aLinks.forEach(function (item, index) {
-		item.setAttribute('href', menuItems[index]['url']);
-		item.innerText = menuItems[index]['text'];
-	});
 }
