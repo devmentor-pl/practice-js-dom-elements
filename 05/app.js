@@ -8,8 +8,10 @@ const firstArticle = curr.parentElement;
 firstArticle.appendChild(deleteBtn);
 // --- 2
 const children = curr.parentElement.children;
-for (let i = 0; i < children.length - 2; i++) {
-	children[i].classList.add('siblings');
+for (let i = 0; i < children.length; i++) {
+	if (!children[i].classList.contains('js-curr')) {
+		children[i].classList.add('siblings');
+	}
 }
 // --- 3
 const secondArticle = curr.parentElement.nextElementSibling;
