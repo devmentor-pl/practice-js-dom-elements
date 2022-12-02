@@ -3,18 +3,6 @@ const ul = document.createElement('ul');
 const liList = [];
 const aList = [];
 
-for(let i = 0; i<3; i++) {
-    liList[i] = document.createElement('li');
-    aList[i] = document.createElement('a')
-    ul.appendChild(liList[i]);
-    liList[i].appendChild(aList[i]);
-}
-nav.appendChild(ul);
-
-
-
-
-
 // struktura do wykorzystania w pętli
 const menuItems = [
     {text: 'start', url: '/'},
@@ -22,10 +10,23 @@ const menuItems = [
     {text: 'kontakt', url: '/contact'},
 ];
 
-aList.forEach(function(item, i) {
-    item.setAttribute('href', menuItems[i].url);
-    item.innerText = menuItems[i].text;
-})
+for(let i = 0; i<menuItems.length; i++) {
+    const li  = document.createElement('li');
+    const a = document.createElement('a')
+    ul.appendChild(li);
+    li.appendChild(a);
+    a.setAttribute('href', menuItems[i].url);
+    a.innerText = menuItems[i].text;
+}
+nav.appendChild(ul);
+
+
+
+
+// a.forEach(function(item, i) {
+//     item.setAttribute('href', menuItems[i].url);
+//     item.innerText = menuItems[i].text;
+// })
 
 
 // aList[0].setAttribute('href', '/home')
