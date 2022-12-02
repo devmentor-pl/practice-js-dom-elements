@@ -9,7 +9,9 @@ currClone.textContent = 'Usuń z koszyka';
 currParent.insertBefore(currClone, curr);
 const children = [...currParent.children];
 children.forEach(function(item){
-    item.classList.add('siblings');
+    if(item !== curr){
+        item.classList.add('siblings');
+    }
 })
 
 //3.brat rodica .curr 
