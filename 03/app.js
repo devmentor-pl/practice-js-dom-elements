@@ -1,4 +1,6 @@
-console.log('DOM');
+const button = document.createElement('button');
+const parentForButton = document.querySelector('.parent-for-button');
+parentForButton.appendChild(button);
 
 const buttonSettings = {
     attr: {
@@ -12,3 +14,11 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+for(let key in buttonSettings.attr){
+    button.getAttribute(key)
+}
+for(let key in buttonSettings.css) {
+    button.setAttribute(key, buttonSettings.css)
+}
+//nie wiem jak dokończyć poprawnie pętle for in... 
