@@ -17,37 +17,19 @@ const btnParent = document.querySelector('.parent-for-button');
 
 if (btnParent) {
     const btn = document.createElement('button');
+    const attributeList = buttonSettings.attr;
+    const styleList = buttonSettings.css;
+    const txt = buttonSettings.text;
 
-    for (const key in buttonSettings.attr) {
-        btn.setAttribute(key, buttonSettings.attr[key]);
+    for (const key in attributeList) {
+        btn.setAttribute(key, attributeList[key]);
     }
-    for (const key in buttonSettings.css) {
+    for (const key in styleList) {
+        const style = styleList[key];
 
-        btn.style.key = buttonSettings.css[key];
-        // btn.setAttribute('style', key + buttonSettings.css[key])
+        btn.style.setProperty(key, style);
     }
-    btn.innerText = buttonSettings.text;
+    btn.innerText = txt;
 
-    // for (const key in buttonSettings) {
-
-    //     console.log(buttonSettings[key]);
-
-    //     console.log(Object(buttonSettings).value);
-
-    // btn.setAttribute(buttonSettings[key], key)
-
-    // if (key === 'attr') {
-    //     for (const prop in buttonSettings[key]) {
-    //         btn.setAttribute(prop, buttonSettings[key][prop])
-    //     }
-    // } else if (key === 'css') {
-    //     for (const prop in buttonSettings[key]) {
-    //         btn.style.prop = buttonSettings[key][prop];
-    //     }
-    // }
     btnParent.appendChild(btn);
-    console.log(btn);
 }
-
-
-
