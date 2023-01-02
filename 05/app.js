@@ -9,13 +9,12 @@ if (curr) {
     curr.parentElement.appendChild(delBtn);
 
     const currSiblings = [...curr.parentElement.children];
-    if (currSiblings) {
-        currSiblings.forEach(function (item) {
-            if (!item.classList.contains('js-curr')) {
-                item.classList.add('siblings');
-            }
-        })
-    }
+
+    currSiblings.forEach(function (item) {
+        if (!item.classList.contains('js-curr')) {
+            item.classList.add('siblings');
+        }
+    })
 
     const secondArticle = curr.parentElement.nextElementSibling;
 
