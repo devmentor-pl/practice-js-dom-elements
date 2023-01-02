@@ -33,33 +33,23 @@ const nav = document.querySelector('nav');
 // }
 
 
+const createItem = function (item) {
+    const navItem = document.createElement('li');
+    const navLink = document.createElement('a');
+
+    navLink.innerText = item.text;
+    navLink.setAttribute('href', item.url);
+    navItem.appendChild(navLink);
+
+    return navItem;
+}
+
 if (nav) {
     const navList = document.createElement('ul');
     nav.appendChild(navList);
 
-    // Create <li> array
-    const navItemList = [];
-    for (let i = 0; i < 3; i++) {
-        const navItem = document.createElement('li');
-        navItemList.push(navItem);
-    }
-
-    // Create <a> array
-    const navLinkList = [];
-    for (let j = 0; j < navItemList.length; j++) {
-        const navLink = document.createElement('a');
-        navLinkList.push(navLink);
-    }
-
-    // Fill <a> with content
-    navLinkList.forEach(function (item, index) {
-        item.innerText = menuItems[index].text;
-        item.setAttribute('href', menuItems[index].url);
-    })
-
-    // Add <a> to <li> and <li> to <ul>
-    navItemList.forEach(function (item, index) {
-        item.appendChild(navLinkList[index])
-        navList.appendChild(item);
+    menuItems.forEach(function (item) {
+        const navItem = createItem(item);
+        navList.appendChild(navItem);
     })
 }
