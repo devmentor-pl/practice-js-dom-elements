@@ -17,7 +17,6 @@ const button = document.createElement("button");
 
 for (const key in buttonSettings.attr) {
 	button.setAttribute(key, buttonSettings.attr[key]);
-
 	console.log(button);
 }
 
