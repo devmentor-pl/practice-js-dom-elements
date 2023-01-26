@@ -17,16 +17,9 @@ for (let i = 0; i < menuItems.length; i++) {
 	linkEl = document.createElement("a");
 	ulWrapper.appendChild(liElement);
 	liElement.appendChild(linkEl);
+	linkEl.setAttribute("href", menuItems[i]["url"]);
+	linkEl.innerText = menuItems[i]["text"];
 }
-
-const linksList = ulWrapper.querySelectorAll("a");
-
-// console.log(linksList);
-
-linksList.forEach(function (item, index) {
-	item.setAttribute("href", menuItems[index]["url"]);
-	item.innerText = menuItems[index]["text"];
-});
 
 // wersja be z pętli
 
