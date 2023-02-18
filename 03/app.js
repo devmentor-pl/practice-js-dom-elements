@@ -14,17 +14,15 @@ const buttonSettings = {
 }
 
 const section = document.querySelector('.parent-for-button');
-if(section) {
-    const newButton = document.createElement('button');
-    for (const key in buttonSettings) {
-        newButton.classList.add(buttonSettings[key].className);
-        if(!newButton.hasAttribute('title')) {
-            newButton.setAttribute('title', buttonSettings[key].title);
-        }
-        newButton.style.border = buttonSettings[key].border;
-        newButton.style.padding = buttonSettings[key].padding;
-        newButton.style.color = buttonSettings[key].color;
-        newButton.innerText = buttonSettings.text;
+const newButton = document.createElement('button');
+    for (const key in buttonSettings.attr) {
+        const value = buttonSettings.attr[key];
+        newButton[key] = value;
     }
-    section.appendChild(newButton);
+    for (const key in buttonSettings.css) {
+        const value = buttonSettings.css[key];
+        newButton[key] = value;
     }
+newButton.innerText = buttonSettings.text;
+
+section.appendChild(newButton);
