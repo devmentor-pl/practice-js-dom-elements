@@ -21,7 +21,7 @@ const newButton = document.createElement('button');
     }
     for (const key in buttonSettings.css) {
         const value = buttonSettings.css[key];
-        newButton[key] = value;
+        newButton.style[key] = value;
     }
 newButton.innerText = buttonSettings.text;
 
