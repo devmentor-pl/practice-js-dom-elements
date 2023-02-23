@@ -1,34 +1,18 @@
-console.log('DOM');
+console.log("DOM");
 
+const firstElement = document.querySelector(
+  ".comments__item.comments__item--newest"
+);
+console.log(firstElement);
 
-const firstElement = document.querySelector(".comments__item ",".comments__item--newest")
-console.log(firstElement)
+const dataInfoEl = firstElement.querySelectorAll("span");
 
-const dataInfoEl = firstElement.querySelectorAll("span")
-
-console.log(dataInfoEl)
+console.log(dataInfoEl);
 
 const spanArray = Array.from(dataInfoEl);
 
-console.log(spanArray)
+console.log(spanArray);
 
-spanArray.forEach(function(element,index){
-
-    if(spanArray && spanArray[index].hasAttribute("data-info")){
-
-        index++
-
-        console.log( index , " wartość atrybutu data-info" + element.dataset.info )
-       
-    }
-   
-
-})
-
-
-
-
-
-
-
-
+spanArray.forEach(function (element, index) {
+  console.log(index, " wartość atrybutu data-info" + element.dataset.info);
+});

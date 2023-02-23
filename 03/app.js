@@ -22,20 +22,13 @@ if (buttonParent) {
   buttonParent.appendChild(button);
 
   for (const key in buttonSettings) {
-    const object2 = buttonSettings[key];
+    button.textContent = buttonSettings[key];
 
-    if (key === "attr") {
-      for (const key in object2) {
-        button.setAttribute(key, object2[key]);
-      }
-    } else if (key === "css") {
-      for (const key in object2) {
-        const str = String(object2[key]);
-        console.log(str);
-        button.style.setProperty(key, str);
-      }
-    } else if (key === "text") {
-      button.textContent = buttonSettings[key];
+    for (const key in buttonSettings.attr) {
+      button.setAttribute(key, buttonSettings.attr[key]);
+    }
+    for (const key in buttonSettings.css) {
+      button.style.setProperty(key, buttonSettings.css[key]);
     }
   }
 }

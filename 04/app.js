@@ -3,7 +3,7 @@ const nav = document.querySelector("nav");
 
 // Rozwiązanie 1
 
-if (nav) {
+/*if (nav) {
   const ul = document.createElement("ul");
   nav.appendChild(ul);
 
@@ -61,17 +61,34 @@ if (nav) {
 
   aClone2.textContent = "contact";
   aClone2.setAttribute("href", "/contact");
-}
+}*/
 
 // Rozwiązanie 2
 // struktura do wykorzystania w pętli
+
 const menuItems = [
   { text: "start", url: "/" },
   { text: "galeria", url: "/gallery" },
   { text: "kontakt", url: "/contact" },
 ];
 
+console.log(menuItems);
+
 const ul = document.createElement("ul");
+nav.appendChild(ul);
+
+if (nav) {
+  menuItems.forEach(function (element, index) {
+    const li = document.createElement("li");
+    ul.appendChild(li);
+    const a = document.createElement("a");
+    li.appendChild(a);
+    a.textContent = menuItems[index].text;
+    a.setAttribute("href", menuItems[index].url);
+  });
+}
+
+/*const ul = document.createElement("ul");
 nav.appendChild(ul);
 
 const li = document.createElement("li");
@@ -105,5 +122,4 @@ if(nav){
       element.setAttribute("href", menuItems[index].url);
     });
 }
-
-
+*/
