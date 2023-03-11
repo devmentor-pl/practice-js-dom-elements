@@ -9,28 +9,40 @@ const menuItems = [
 
 const nav = document.querySelector('nav');
 const unordList = document.createElement('ul');
-const listElem = document.createElement('li')
-const aElement = document.createElement('a');
+// const listElem = document.createElement('li')
+// const aElement = document.createElement('a');
 
 nav.appendChild(unordList);
-unordList.appendChild(listElem);
-listElem.appendChild(aElement);
+// unordList.appendChild(listElem);
+// listElem.appendChild(aElement);
 
-aElement.setAttribute('href', '/');
-aElement.textContent = 'start';
+// aElement.setAttribute('href', '/');
+// aElement.textContent = 'start';
 
-const listElem2 = listElem.cloneNode(true);
-const aElement2 = listElem2.querySelector('a');
+// const listElem2 = listElem.cloneNode(true);
+// const aElement2 = listElem2.querySelector('a');
 
-aElement2.setAttribute('href', '/gallery');
-aElement2.textContent = 'gallery';
+// aElement2.setAttribute('href', '/gallery');
+// aElement2.textContent = 'gallery';
 
-unordList.appendChild(listElem2);
+// unordList.appendChild(listElem2);
 
-const listElem3 = listElem.cloneNode(true);
-const aElement3 = listElem3.querySelector('a');
+// const listElem3 = listElem.cloneNode(true);
+// const aElement3 = listElem3.querySelector('a');
 
-aElement3.setAttribute('href', '/contact');
-aElement3.textContent = 'contact';
+// aElement3.setAttribute('href', '/contact');
+// aElement3.textContent = 'contact';
 
-unordList.appendChild(listElem3);
+// unordList.appendChild(listElem3);
+
+
+menuItems.forEach(function(item){
+    const listElem = document.createElement('li');
+    const aElem = document.createElement('a');
+
+    unordList.appendChild(listElem);
+    listElem.appendChild(aElem);
+
+    aElem.innerText = item.text;
+    aElem.href = item.url;
+})
