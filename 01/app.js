@@ -3,6 +3,7 @@ console.log('DOM');
 const twoClasses = document.querySelector('.comments__item.comments__item--newest');
 
 if (twoClasses) {
+    // lepiej użyć '[data-info]'
     const spanList = twoClasses.querySelectorAll('span');
 
     let counter = 0;

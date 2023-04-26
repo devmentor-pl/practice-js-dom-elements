@@ -38,13 +38,13 @@ menuItems.forEach(function (element) {
     liElement = document.createElement('li');
     aElement = document.createElement('a');
 
-    const menuItemsIndex = menuItems.indexOf(element);
-    const urlElement = (menuItems[menuItemsIndex]);
+    //const menuItemsIndex = menuItems.indexOf(element);
+    //const urlElement = (menuItems[menuItemsIndex]);
 
-    aElement.setAttribute('href', urlElement.url)
-    aElement.innerText = urlElement.text;
+    aElement.setAttribute('href', element.url) // aElement.href = element.url
+    aElement.innerText = element.text; //element.text
 
-    ulElement.appendChild(liElement);
     liElement.appendChild(aElement)
+    ulElement.appendChild(liElement);
 
 });

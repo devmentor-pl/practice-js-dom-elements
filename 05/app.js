@@ -6,6 +6,7 @@ if (curr) {
     const buttonDeleteProduct = document.createElement('button');
     buttonDeleteProduct.classList.add('article__btn');
     buttonDeleteProduct.classList.add('article__btn--deleteProduct');
+    //buttonDeleteProduct.className = 'sprawdzam-czy-moge a moze wiecej'
     buttonDeleteProduct.innerText = 'Usuń z koszyka';
 
     const articleElement = curr.parentElement;
@@ -13,7 +14,9 @@ if (curr) {
     
     const childrenArticleElement = articleElement.children;
     for (let i = 0; i < childrenArticleElement.length; i++) {
-        childrenArticleElement[i].classList.add('siblings');
+        if (childrenArticleElement[i] !== curr) {
+            childrenArticleElement[i].classList.add('siblings');
+        }
     }
 
     const secondArticleElement = articleElement.nextElementSibling;
@@ -23,6 +26,7 @@ if (curr) {
     const childrenThirdArticleElement = thirdArticleElement.children;
     const thirdButton = childrenThirdArticleElement[2];
     const newParagraph = document.createElement('p');
+    newParagraph.innerText = 'Jakaś nowa treść'
     thirdArticleElement.insertBefore(newParagraph, thirdButton);
 
     const sectionElement = articleElement.parentElement;

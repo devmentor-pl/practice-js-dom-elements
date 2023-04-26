@@ -8,3 +8,4 @@ if (aList) {
         }
     }
 }
+// to samo co w 1 i użyć forEach()
