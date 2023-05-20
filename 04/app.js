@@ -13,11 +13,11 @@ const menuItems = [
 // const nav = document.querySelector('nav')
 
 // nav.innerHTML = 
-//     '<ul>\
-//         <li><a href="/">start</a></li>\
-//         <li><a href="/gallery">galeria</a></li>\
-//         <li><a href="/contact">kontakt</a></li>\
-//     </ul>'
+//     `<ul>
+//         <li><a href="/">start</a></li>
+//         <li><a href="/gallery">galeria</a></li>
+//         <li><a href="/contact">kontakt</a></li>
+//     </ul>`
 
 
 // II opcja
@@ -61,13 +61,8 @@ if (nav) {
         const item = document.createElement('li')
         const link = document.createElement('a')
 
-        for (const key in el) {
-            if (key === "text") {
-                link.innerText = el[key]
-            } else if (key === "url") {
-                link.setAttribute('href', el[key])
-            }
-        }
+        link.innerText = el.text
+        link.setAttribute('href', el.url)
 
         item.appendChild(link)
         list.appendChild(item)

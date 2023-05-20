@@ -2,12 +2,11 @@ console.log('DOM');
 
 const links = document.querySelectorAll('a[data-url]')
 
-if (links.length > 0) {
-    for (let i = 0; i < links.length; i++) {
-        const attributeValue = links[i].getAttribute("data-url")
-        links[i].setAttribute("href", attributeValue)
-    }
+for (let i = 0; i < links.length; i++) {
+    const attributeValue = links[i].getAttribute("data-url")
+    links[i].setAttribute("href", attributeValue)
 }
+
 
 
 // const links = document.querySelectorAll('a')
