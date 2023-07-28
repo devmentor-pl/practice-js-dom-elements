@@ -26,18 +26,15 @@ if (nav) {
     // arr[1].setAttribute('href', "/gallery"), arr[1].textContent = "galeria";
     // arr[2].setAttribute('href', "/contact"), arr[2].textContent = "kontakt";
 
-
-
-    menuItems.forEach(function(item) {
-     const li = document.createElement('li');
-     ul.appendChild(li)
-     const a = document.createElement('a');
-     li.appendChild(a);
-     for(const key in item) {
-        a.setAttribute('href', item[key]);
-        a.textContent = item.text
-     }
-    })
+    menuItems.forEach(function (item) {
+      const li = document.createElement("li");
+      ul.appendChild(li);
+      const a = document.createElement("a");
+      li.appendChild(a);
+      for (const key in item) {
+        a.setAttribute("href", item[key]);
+        a.textContent = item.text;
+      }
+    });
   }
-
 }
