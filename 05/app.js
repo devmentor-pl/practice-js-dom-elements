@@ -28,10 +28,20 @@ if (curr) {
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo quibusdam, nemo neque consequuntur pariatur totam? Facere quaerat molestias hic.";
   }
 
-  const childOfSection = lastArticle.parentElement.childNodes;
   const section = lastArticle.parentElement;
-  let copyArticles = childOfSection.forEach(function (article) {
-    const clone = article.cloneNode(true);
-    section.appendChild(clone);
-  });
+  const newArticle = document.createElement('article');
+  const firsArticleChild = section.firstElementChild;
+  section.appendChild(newArticle);
+  section.insertBefore(newArticle, firsArticleChild);
+
+  const childOfSection = section.children;
+  
+  for (let i = 0; i < childOfSection.length; i++) {
+    if (childOfSection[i].classList.contains('article')) {
+      const clone = childOfSection[i].cloneNode(true);
+      newArticle.appendChild(clone);
+    }
+  }
+  
 }
+
