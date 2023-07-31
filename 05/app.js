@@ -11,7 +11,6 @@ const lastArticles = sectionArticles.lastElementChild;
 const newButton = document.createElement('button');
 const newParagraph = document.querySelector('p');
 
-
 // 5.   ...elementy artykulu sa widoczne w drzewku DOM, lecz chyba pozycjonowanie sie rozjechalo i na podgladzie nie widac
 const cloneArticle = firstArticle.cloneNode(true);
 sectionArticles.insertBefore(cloneArticle, firstArticle);
@@ -20,8 +19,12 @@ sectionArticles.insertBefore(cloneArticle, firstArticle);
 newButton.textContent = 'Usun z koszyka';
 firstArticle.appendChild(newButton);
 // 2
-for (const children of currSiblings) {
-	children.classList.add('siblings');
+for (let i = 0; i < currSiblings.length; i++) {
+	if (currSiblings[i] === curr) {
+		continue;
+	} else {
+		currSiblings[i].classList.add('siblings');
+	}
 }
 //3
 firstArticleNextElem.setAttribute('title', 'nextElementSibiling');
