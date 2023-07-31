@@ -12,7 +12,6 @@ const nav = document.querySelector("nav");
 if (nav) {
   const ul = document.createElement("ul");
   nav.appendChild(ul);
-  if (ul) {
     // const numberOfElements = 3;
     // const arr = [];
     // for (let i = 0; i < numberOfElements; i++) {
@@ -31,10 +30,7 @@ if (nav) {
       ul.appendChild(li);
       const a = document.createElement("a");
       li.appendChild(a);
-      for (const key in item) {
-        a.setAttribute("href", item[key]);
-        a.textContent = item.text;
-      }
+      a.setAttribute('href', item.url);
+      a.textContent = item.text
     });
   }
-}
