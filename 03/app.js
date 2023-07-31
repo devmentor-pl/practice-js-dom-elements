@@ -22,8 +22,6 @@ for (const attrKeys in buttonSettings.attr) {
 for (const cssKeys in buttonSettings.css) {
 	btnElement.style[cssKeys] = buttonSettings.css[cssKeys];
 }
-for (const textKeys in buttonSettings.text) {
-	btnElement.textContent = buttonSettings.text;
-}
+btnElement.textContent = buttonSettings.text;
 
 sectionElem.appendChild(btnElement);
