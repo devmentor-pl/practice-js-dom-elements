@@ -1,8 +1,8 @@
 console.log('DOM');
 
-const commentList = document.querySelector('.comments__item.comments__item--newest');
+const commentLi = document.querySelector('.comments__item.comments__item--newest');
 
-if (commentList) {
+if (commentLi) {
     const dataSpan = commentList.querySelectorAll('[data-info]');
     console.log(`ilość elementów z atrybutem dataset = ${dataSpan.length}`)
 }
