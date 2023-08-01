@@ -20,9 +20,7 @@ newButton.textContent = 'Usun z koszyka';
 firstArticle.appendChild(newButton);
 // 2
 for (let i = 0; i < currSiblings.length; i++) {
-	if (currSiblings[i] === curr) {
-		continue;
-	} else {
+	if (currSiblings[i] !== curr) {
 		currSiblings[i].classList.add('siblings');
 	}
 }
