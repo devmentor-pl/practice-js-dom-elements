@@ -12,3 +12,19 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+//Tworzymy element typu button
+const buttonElement = document.createElement('button');
+//Ustawiamy atrybuty z obiektu buttonSettings
+for (const attrKey in buttonSettings.attr) {
+    buttonElement.setAttribute(attrKey, buttonSettings.attr[attrKey]);
+}
+//Ustawiamy style z obiektu buttonSettings
+for (const cssKey in buttonSettings.css) {
+    buttonElement.style[cssKey] = buttonSettings.css[cssKey];
+}
+//Ustawiamy tekst przycisku
+buttonElement.textContent = buttonSettings.text;
+//Pobieramy rodzica do przycisku 
+const parentElement = document.querySelector('.parent-for-button');
+//Dodajemy przycisk do rodzica
+parentElement.appendChild(buttonElement);
