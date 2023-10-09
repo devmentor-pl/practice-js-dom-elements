@@ -27,3 +27,7 @@ buttonElement.textContent = buttonSettings.text;
 
 const parentElement = document.querySelector('.parent-for-button');
 parentElement.appendChild(buttonElement);
+
+buttonElement.addEventListener('click', function() {
+    alert('Przycisk został kliknięty!');
+});
