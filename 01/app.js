@@ -9,10 +9,7 @@ const dataInfoList = commentsList.querySelectorAll('[data-info]')
  if (dataInfoList !== null) {
     
 
-    for (let i = 0; i < dataInfoList.length; i++) {
-         console.log( (i +1) + " "  +"wyszukany element");
-
-    }
+    console.log(dataInfoList.length)
 
  }
 

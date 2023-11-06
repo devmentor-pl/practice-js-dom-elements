@@ -13,7 +13,7 @@ const buttonSettings = {
     text: 'Click me!',
 }
 
-const btnParent = document.querySelectorAll('.parent-for-button');
+const btnParent = document.querySelector('.parent-for-button');
 
 if (btnParent) {
     const newButton = document.createElement('button');
