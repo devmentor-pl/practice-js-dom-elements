@@ -8,18 +8,13 @@ const menuItems = [
 ];
 
 const navEl = document.querySelector('nav');
-const navList = document.createElement('ul');
-navEl.appendChild(navList);
-for (let i = 0; i < 3; i++) {
-  const navItem = document.createElement('li');
-  const navLink = document.createElement('a');
-  navList.appendChild(navItem);
-  navItem.appendChild(navLink);
+if (navEl) {
+  const navList = document.createElement('ul');
+  navEl.appendChild(navList);
+  menuItems.forEach((item, index) => {
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `<a href=${menuItems[index].url}>${menuItems[index].text}</a>`;
+
+    navList.appendChild(listItem);
+  });
 }
-const navLink = document.querySelectorAll('a');
-navLink[0].setAttribute('href', '/');
-navLink[0].innerText = 'home';
-navLink[1].setAttribute('href', '/gallery');
-navLink[1].innerText = 'galeria';
-navLink[2].setAttribute('href', '/contact');
-navLink[2].innerText = 'kontakt';
