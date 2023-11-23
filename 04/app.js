@@ -13,8 +13,11 @@ if (navEl) {
   navEl.appendChild(navList);
   menuItems.forEach((item, index) => {
     const listItem = document.createElement('li');
-    listItem.innerHTML = `<a href=${menuItems[index].url}>${menuItems[index].text}</a>`;
 
     navList.appendChild(listItem);
+    const listLink = document.createElement('a');
+    listLink.innerText = menuItems[index].text;
+    listLink.href = menuItems[index].url;
+    listItem.appendChild(listLink);
   });
 }
