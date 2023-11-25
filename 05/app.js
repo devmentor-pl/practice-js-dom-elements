@@ -10,11 +10,13 @@ if (curr) {
 
   // Task 2
   const currSiblings = [...curr.parentElement.children];
-  if (currSiblings > 0) {
-    currSiblings.forEach((el) => {
+  console.log(currSiblings);
+
+  currSiblings.forEach((el) => {
+    if (el !== curr) {
       el.classList.add('siblings');
-    });
-  }
+    }
+  });
 
   // Task 3
   const nextSiblingArticle = curr.parentElement.nextElementSibling;
