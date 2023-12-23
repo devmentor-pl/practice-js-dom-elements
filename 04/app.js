@@ -63,3 +63,33 @@ usuwania lub modyfikowania pozycji menu.
 
 
  */
+/* const nav = document.createElement('nav');
+const ul = document.createElement('ul');
+
+const start = document.createElement('li');
+const startLink = document.createElement('a');
+startLink.href = '/';
+startLink.textContent = 'start';
+start.appendChild(startLink);
+
+const gallery = document.createElement('li');
+const galleryLink = document.createElement('a');
+galleryLink.href = '/gallery';
+galleryLink.textContent = 'galeria';
+gallery.appendChild(galleryLink);
+
+const contact = document.createElement('li');
+const contactLink = document.createElement('a');
+contactLink.href = '/contact';
+contactLink.textContent = 'kontakt';
+contact.appendChild(contactLink);
+
+ul.appendChild(start);
+ul.appendChild(gallery);
+ul.appendChild(contact);
+
+nav.appendChild(ul);
+
+document.body.appendChild(nav);
+ */
+
