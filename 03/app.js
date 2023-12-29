@@ -12,3 +12,15 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+let newButton = document.createElement('button');
+
+for (let attributeName in buttonSettings.attr) {
+    newButton.setAttribute(attributeName, buttonSettings.attr[attributeName]);
+}
+
+for (let style in buttonSettings.css) {
+    newButton.setAttribute(style, buttonSettings.css[style]);
+}
+
+newButton.textContent = buttonSettings.text;
