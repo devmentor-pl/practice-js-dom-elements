@@ -24,3 +24,6 @@ for (let style in buttonSettings.css) {
 }
 
 newButton.textContent = buttonSettings.text;
+
+let buttonClass = document.querySelector('.parent-for-button');
+buttonClass.appendChild(newButton);
