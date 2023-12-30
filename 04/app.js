@@ -6,7 +6,7 @@ const menuItems = [
     {text: 'galeria', url: '/gallery'},
     {text: 'kontakt', url: '/contact'},
 ];
-
+/* pierwsza metoda */
 let nameElement = document.querySelector('nav');
 let ulElement = document.createElement('ul')
 
@@ -30,3 +30,21 @@ for (let i = 1; i <= 3; i++) {
     ulElement.appendChild(liElement);
 }
 nameElement.appendChild(ulElement);
+
+/* druga metoda */
+
+menuItems.forEach(function(menuItem){
+    let liElement = document.createElement('li');
+    let linkElement = document.createElement('a');
+
+    linkElement.textContent = menuItem.text;
+    linkElement.setAttribute('href', menuItem.url);
+
+    liElement.appendChild(linkElement);
+    ulElement.appendChild(liElement);
+});
+
+nameElement.appendChild(ulElement);
+
+
+
