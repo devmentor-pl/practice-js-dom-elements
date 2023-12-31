@@ -7,7 +7,8 @@ const curr = document.querySelector('.js-curr');
 
  const button = document.createElement('button');
 button.textContent = 'usuń z koszyka';
-curr.appendChild(button);
+
+curr.parentNode.appendChild(button);
 
 /* 1. Do wszystkich elementów, które są rodzeństwem
  elementu o klasie .js-curr, dodaj klasę .siblings(wykorzystaj pętlę). */
