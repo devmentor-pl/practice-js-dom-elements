@@ -15,3 +15,20 @@ if (curr) {
         }
     }
 }
+
+
+/* do nastepnego elementu o klasie .article */
+/* ktory wystepuje zaraz po rodzicu elementu o klasie .js-curr */
+
+let nextArticleElement = curr.nextElementSibling;
+
+while (nextArticleElement && !nextArticleElement.classList.contains('article')) {
+    nextArticleElement = nextArticleElement.nextElementSibling;
+}
+
+
+if (nextArticleElement) {
+    nextArticleElement.setAttribute('title', 'nextElementSibling');
+} else {
+    console.log("Brak następnego elementu o klasie .article");
+}
