@@ -20,7 +20,7 @@ for (let attributeName in buttonSettings.attr) {
 }
 
 for (let style in buttonSettings.css) {
-    newButton.setAttribute(style, buttonSettings.css[style]);
+    newButton.style[style] = buttonSettings.css[style];
 }
 
 newButton.textContent = buttonSettings.text;
