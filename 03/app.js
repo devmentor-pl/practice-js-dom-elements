@@ -1,4 +1,4 @@
-console.log('DOM');
+
 
 const buttonSettings = {
     attr: {
@@ -12,3 +12,29 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+const newButton  = document.createElement('button');
+
+
+for (settingName in buttonSettings) {
+    typeOfSetting = buttonSettings[settingName];
+    //atributes + styles
+    if(typeof typeOfSetting==='object'){
+        //attributes
+        if (settingName==='attr') {
+            for (property in typeOfSetting) {
+                newButton[property]= `${typeOfSetting[property]}`;
+            }
+        }
+        //styles
+        for (property in typeOfSetting) {
+            newButton.style[property]= `${typeOfSetting[property]}`;
+        }
+    //text
+    } else {
+        newButton.innerText = typeOfSetting;
+    }
+}
+
+const parentEl = document.querySelector('.parent-for-button');
+parentEl.appendChild(newButton);
