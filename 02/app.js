@@ -7,6 +7,5 @@ const dataUrlValue = dataUrl.map(function (element) {
 });
 
 dataUrl.forEach(function (element, index) {
-  element.removeAttribute("data-url");
   element.setAttribute("href", dataUrlValue[index]);
 });
