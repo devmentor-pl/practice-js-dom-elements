@@ -7,13 +7,21 @@ const brotherButton = document.createElement('button');
 brotherButton.innerText = 'usuń z koszyka';
 article.appendChild(brotherButton);
 
-const articleArray = article.children;
-const articleLength = article.childElementCount;
+const articleChildrenList = Array.from(article.children);
+const currSiblingsList = articleChildrenList;
 
-for (let i = 0; i < articleLength; i ++) {
-  articleArray[i].classList.add('siblings');
+currSiblingsList.forEach(function (element, index) {
+  if ((element === curr)) {
+    return currSiblingsList.splice(index, 1);
+  }
+});
+
+const currSiblingsNumber = currSiblingsList.length;
+console.log(currSiblingsNumber);
+
+for (let i = 0; i < currSiblingsNumber; i++) {
+  currSiblingsList[i].classList.add("siblings");
 }
-
 const siblingArticle = article.nextElementSibling;
 siblingArticle.title = 'nextElementSibling';
 

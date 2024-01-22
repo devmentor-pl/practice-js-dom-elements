@@ -56,22 +56,15 @@ navLocation.appendChild(menu);
 const navLocation = document.querySelector("nav");
 const menu = document.createElement("ul");
 
-const menuContainer1 = document.createElement("li");
-const menuContainer2 = document.createElement("li");
-const menuContainer3 = document.createElement("li");
-const anchor1 = document.createElement("a");
-const anchor2 = document.createElement("a");
-const anchor3 = document.createElement("a");
+menuItems.forEach(function (element) {
+  const a = document.createElement('a');
+  const li = document.createElement('li');
 
-const menuContainer = [menuContainer1, menuContainer2, menuContainer3];
-const anchor = [anchor1, anchor2, anchor3];
+  a.setAttribute('href', element.url);
+  a.innerText = element.text;
 
-anchor.forEach(function (element, index) {
-  element.innerText = menuItems[index].text;
-  element.setAttribute('href', menuItems[index].url);
-})
-for (let i = 0; i < menuContainer.length; i++) {
-  menuContainer[i].appendChild(anchor[i]);
-  menu.appendChild(menuContainer[i]);
-}
+  li.appendChild(a);
+  menu.appendChild(li);
+});
+
 navLocation.appendChild(menu);
