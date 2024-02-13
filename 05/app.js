@@ -10,7 +10,9 @@ if (curr) {
   if (currParent.hasChildNodes()) {
     const currSiblings = currParent.children;
     for (let i = 0; i < currSiblings.length; i++) {
-      currSiblings[i].classList.add("siblings");
+      if (curr !== currSiblings[i]) {
+        currSiblings[i].classList.add("siblings");
+      }
     }
   }
 
