@@ -22,7 +22,5 @@ if (sectionEl) {
   for (let el in buttonSettings.css) {
     btnEl.style[el] = buttonSettings.css[el];
   }
-  for (let el in buttonSettings) {
-    btnEl.innerText = buttonSettings[el];
-  }
+  btnEl.innerText = buttonSettings.text;
 }
