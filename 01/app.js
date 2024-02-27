@@ -1,10 +1,11 @@
 console.log('DOM');
 
-const elementOneClass = document.getElementsByClassName('comments__item');
-console.log(elementOneClass); // jest zawartość
+const element = document.querySelector('.comments__item.comments__item--newest');
+console.log(element); 
 
-const elementBothClasses = elementOneClass.getElementsByClassName('comments__item--newest');
-    console.log(elementBothClasses); // błąd
+// Elementy, które posiadają atrybut data-info:
 
-const elementWithAttribute = elementBothClasses.getAttribute('data-info');
-console.log(elementWithAttribute); // błąd 
+const elementWithAttribute = element.querySelectorAll('[data-info]');
+console.log(elementWithAttribute, 'elementy z atrybutem data-info');
+
+console.log(elementWithAttribute.length, 'ilość elementów');

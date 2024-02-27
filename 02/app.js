@@ -1,10 +1,14 @@
 console.log('DOM');
 
-const linkList = document.querySelectorAll('a');
+// Wyszukaj wszystkie linki, które posiadają atrybut data-url.
+const linkList = document.querySelectorAll('[data-url]');
+
 console.log(linkList);
 
-
-//pobierz zawartość atrybutu do zmiennej
-const linkListWithAttribute = linkList.getAttribute('data-url');
-    console.log(linkListWithAttribute); //nie działa
-
+// Pobierz zawartość tego atrybutu do zmiennej.
+const linkListValue = linkList.forEach(function(value) {
+    const getAttributeValue = value.getAttribute('data-url', value);
+    const setAttributeValue = value.setAttribute('href', getAttributeValue);
+    console.log(setAttributeValue);
+})
+// działa prawidłowo
