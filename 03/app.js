@@ -34,8 +34,6 @@ for(const elAttr in buttonSettings.attr
 
 for(const elCss in buttonSettings.css) {
     newButton.style[elCss] = buttonSettings.css[elCss];
-// dlaczego style[elCss] a nie style.elCss?
-// wzór: document.getElementById(id).style.property = new style
 }
 
 for(elText in buttonSettings) {
