@@ -39,7 +39,7 @@ const menuItems = [
 // }
 
 
-// WARIANT 2 z forEach() // dodają się wszystkie 3 linki <a> do kazdego <li>
+// WARIANT 2 z forEach()
 
 const navElement = document.querySelector('nav');
 console.log(navElement);
@@ -49,28 +49,12 @@ if(navElement) {
     
     menuItems.forEach(function(el) {
         const liElement = document.createElement('li');
-
-        for(i=0; i<menuItems.length; i ++) {
-            const link = document.createElement('a');
-            switch(i) {
-                case 0: 
-                link.innerText = 'start';
-                link.setAttribute('href', '/');
-                liElement.appendChild(link);
-                break;
-                case 1: 
-                link.innerText = 'galeria';
-                link.setAttribute('href', '/gallery');
-                liElement.appendChild(link);
-                break;
-                case 2: 
-                link.innerText = 'kontakt';
-                link.setAttribute('href', '/contact');
-                liElement.appendChild(link);
-                break;
-            }
-        }
+        const link = document.createElement('a');
+        link.innerText = el.text;
+        link.setAttribute('href', el.url);
+        liElement.appendChild(link);
         ulElement.appendChild(liElement);
+        console.log(el.url);
     })
     navElement.appendChild(ulElement);  
 };

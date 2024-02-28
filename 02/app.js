@@ -11,4 +11,3 @@ const linkListValue = linkList.forEach(function(value) {
     const setAttributeValue = value.setAttribute('href', getAttributeValue);
     console.log(setAttributeValue);
 })
-// działa prawidłowo

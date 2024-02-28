@@ -11,15 +11,12 @@ button.innerText = 'Usuń z koszyka';
 
 //Zadanie 2
 
-// Do wszystkich elementów, które są 
-// rodzeństwem elementu o klasie .js-curr, 
-// dodaj klasę .siblings (wykorzystaj pętlę).
-
-// lista rodzeństwa .js-curr
 const allChildren = parent.children;
 
-for(i=0; i<4; i ++) {
-
+for(let i=0; i<allChildren.length; i ++) {
+    if(allChildren[i] !== curr) {
+        allChildren[i].classList.add('siblings');
+    }
 }
 
 //Zadanie 3
@@ -28,27 +25,22 @@ const firstChild = parent.firstElementChild;
 firstChild.setAttribute('title', 'nextElementSibling');
 
 //Zadanie 4
-// umieść newParagraph przed znacznikiem <button/>.
 
 const newParagraph = document.createElement('p');
 const mainParent = parent.parentElement;
 const lastArticle = mainParent.lastElementChild;
+const lastButton = lastArticle.querySelector('button');
 
-lastArticle.appendChild(newParagraph);
+lastArticle.insertBefore(newParagraph, lastButton);
 
-// Zadanie 5
-
-const newArticleElement = document.createElement('article');
-
-const firstChildParent = mainParent.firstElementChild;
-
-mainParent.insertBefore(newArticleElement, firstChildParent);
-
-newArticleElement.className = 'articles__item article';
+// Zadanie 5  
+const newArticle = lastArticle.cloneNode(true);
+const firstArticle = mainParent.firstElementChild;
+mainParent.insertBefore(newArticle, firstArticle);
 console.log(mainParent);
 
-//dodać h1, paragraf, button z klasami i tekstem - jak w innych paragrafach
-// czy tutaj pojedyńczo czy jakieś pętle itp?
+
+
 
 
 
