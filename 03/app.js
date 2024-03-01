@@ -23,21 +23,15 @@ console.log(newButton);
 // 1 attr (obiekt) 
 // 2 css (obiekt)
 // 3 text (string)
+
 for(const elAttr in buttonSettings.attr
     ) {
-    if(elAttr === 'className') {
-        newButton.className = buttonSettings.attr[elAttr];
-    } else {
-        newButton.setAttribute(elAttr, buttonSettings.attr[elAttr]);
-    }    
-}
+    newButton[elAttr] = buttonSettings.attr[elAttr];
+    newButton.setAttribute(elAttr, buttonSettings.attr[elAttr]);
+}    
 
 for(const elCss in buttonSettings.css) {
     newButton.style[elCss] = buttonSettings.css[elCss];
 }
 
-for(elText in buttonSettings) {
-    if (elText === 'text') {
-        newButton.innerText = buttonSettings[elText];
-    }
-}
+newButton.innerText = buttonSettings.text;

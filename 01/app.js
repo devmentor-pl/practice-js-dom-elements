@@ -5,7 +5,9 @@ console.log(element);
 
 // Elementy, które posiadają atrybut data-info:
 
-const elementWithAttribute = element.querySelectorAll('[data-info]');
-console.log(elementWithAttribute, 'elementy z atrybutem data-info');
-
-console.log(elementWithAttribute.length, 'ilość elementów');
+if(element) {
+    const elementWithAttribute = element.querySelectorAll('[data-info]');
+    console.log(elementWithAttribute, 'elementy z atrybutem data-info');
+    
+    console.log(elementWithAttribute.length, 'ilość elementów');
+}
