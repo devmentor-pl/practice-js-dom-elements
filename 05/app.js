@@ -1,18 +1,19 @@
 console.log('DOM');
+console.log(document.body.childNodes)
 
-const curr = document.querySelector('.js-curr');
+const curr = document.querySelector(".js-curr")
 
 const button = document.createElement("button")
 button.textContent = "usuń z koszyka"
 button.style.marginLeft = "5px"
-curr.parentNode.insertBefore(button, curr.nextSibling)
+curr.parentNode.insertBefore(button, curr.nextElementSibling)
 
-let sibiling = curr.parentNode.firstChild
-while (sibiling) {
-  if (sibiling.nodeType === 1 && sibiling !== curr) {
-    sibiling.classList.add("sibiling")
+let sibling = curr.parentNode.firstElementChild
+while (sibling) {
+  if (sibling !== curr) {
+    sibling.classList.add("siblings")
   }
-  sibiling = sibiling.nextSibling
+  sibling = sibling.nextElementSibling
 }
 
 const nextArticle = curr.parentNode.nextElementSibling
