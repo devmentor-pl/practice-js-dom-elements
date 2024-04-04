@@ -45,23 +45,34 @@ const menuItems = [
 ];
 
 const ulList = document.createElement("ul")
-const liItem = document.createElement("li");
-const aItem = document.createElement("a");
 
 menuItems.forEach(function (item) {
-	console.log(item);
+	// console.log(item);
+	const liItem = document.createElement("li");
+	const aItem = document.createElement("a");
 
 	for (let key in item) {
 		if (key === "text") {
-			aItem.innerText = item[key];
+
+			// console.log("klucz:", key);
+			// console.log("wartość;", item[key]);
+			
+			aItem.textContent = item[key];
+			
 		} else if (key === "url") {
+
+			// console.log("klucz:", key);
+			// console.log("wartość;", item[key]);
+			
 			aItem.setAttribute("href", item[key]);
 		}
+		
 	}
-    liItem.appendChild(aItem);
-    ulList.appendChild(liItem)
-    // console.log("Klucz:", key);
-    // console.log("Wartość:", item[key]);
-    navbar.appendChild(ulList)
+
+	liItem.appendChild(aItem);
+	ulList.appendChild(liItem)
 });
+
+navbar.appendChild(ulList)
+
 
