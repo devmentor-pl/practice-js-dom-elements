@@ -48,3 +48,45 @@ const art3NewPara = document.createElement("p");
 article3.insertBefore(art3NewPara, art3Button);
 
 console.log(art3Children);
+
+// NR 5
+
+const generalSection = article1.parentElement
+console.log(generalSection);
+
+//stworzenie i dodanie artykułu
+const article0 = document.createElement('article')
+article0.classList.add('articles__item.article')
+generalSection.insertBefore(article0, article1)
+// console.log(generalSection);
+
+//stworzenie i dodanie h1
+const art0Heading = document.createElement('h1')
+art0Heading.classList.add('article__title')
+art0Heading.textContent = 'Dodatkowy 1 artykuł'
+article0.appendChild(art0Heading)
+// console.log(article0.children);
+
+// stworzenie i dodanie paragrafu
+const art0Para = document.createElement('p')
+art0Para.classList.add('article__description')
+art0Para.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo quibusdam, nemo neque consequuntur pariatur totam? Facere quaerat molestias hic.'
+article0.appendChild(art0Para)
+// console.log(article0.children);
+
+// stworzenie i dodanie <button>
+const art0Button = document.createElement('button')
+art0Button.classList.add('article__btn')
+art0Button.textContent = 'Kupuję!'
+article0.appendChild(art0Button)
+// console.log(article0.children);
+
+
+
+
+
+
+
+
+
+
