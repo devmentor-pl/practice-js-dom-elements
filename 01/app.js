@@ -1,4 +1,10 @@
-let count = 0;
-const allComments = document.querySelectorAll('.comments__item' && '.comments__item--newest');
+let allDataList = [];
+const allCommentsList = document.querySelectorAll('.comments__item' && '.comments__item--newest');
+allCommentsList.forEach(function(element){
+    count = element.querySelectorAll('[data-info]').length;
+    allDataList = element.querySelectorAll('[data-info]');
+    });
 
-console.log(allComments);
+console.log(allCommentsList);
+console.log(allDataList);
+console.log('Znaleziono '+allDataList.length+' elementów z atrybutem data-info');
