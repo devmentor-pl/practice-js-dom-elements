@@ -1,10 +1,10 @@
 console.log('DOM');
 const linkList = document.getElementsByTagName('a')
-const sth = Array.from(linkList);
-if (sth) {
-    for (let i = 0; i < sth.length; i++) {
-        if (linkList[i].hasAttribute('data-url')) {
-            const element = linkList[i];
+const linkListArray = Array.from(linkList);
+if (linkListArray) {
+    for (let i = 0; i < linkListArray.length; i++) {
+        if (linkListArray[i].hasAttribute('data-url')) {
+            const element = linkListArray[i];
             const attributeName = element.getAttribute('data-url');
             element.setAttribute(
                 'href',
