@@ -26,6 +26,10 @@ newParagraph.innerText = 'Nowy paragraf';
 const currLastUncle = currGrandParent.lastElementChild;
 currLastUncle.insertBefore(newParagraph, currLastUncle.lastElementChild);
 
+const newUncle = currFirstUncle.cloneNode(true);
+newUncle.firstElementChild.innerText = 'JS - Nowy artykuł';
+currGrandParent.insertBefore(newUncle, currParent);
+
 console.log(currParent);
 console.log(currGrandParent);
 console.log(currAndSiblingsList.length);
