@@ -21,8 +21,14 @@ currAndSiblingsList.forEach(function(element){
 const currFirstUncle = currParent.nextElementSibling;
 currFirstUncle.setAttribute('title','nextElementSibling');
 
+const newParagraph = document.createElement('p');
+newParagraph.innerText = 'Nowy paragraf';
+const currLastUncle = currGrandParent.lastElementChild;
+currLastUncle.insertBefore(newParagraph, currLastUncle.lastElementChild);
+
 console.log(currParent);
 console.log(currGrandParent);
 console.log(currAndSiblingsList.length);
 console.log(currAndSiblingsList);
 console.log(currParent.nextElementSibling);
+console.log(currGrandParent.lastElementChild);
