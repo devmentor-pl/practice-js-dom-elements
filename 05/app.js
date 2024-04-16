@@ -18,7 +18,11 @@ currAndSiblingsList.forEach(function(element){
     }
 })
 
+const currFirstUncle = currParent.nextElementSibling;
+currFirstUncle.setAttribute('title','nextElementSibling');
+
 console.log(currParent);
 console.log(currGrandParent);
 console.log(currAndSiblingsList.length);
 console.log(currAndSiblingsList);
+console.log(currParent.nextElementSibling);
