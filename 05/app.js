@@ -16,3 +16,9 @@ for (const sibling of curr.parentElement.children) {
 
 const siblingArticle = curr.parentElement.nextElementSibling
 siblingArticle.setAttribute('title', 'nextElementSibling')
+
+const lastArticle = curr.parentElement.parentElement.lastElementChild
+const newParagraph = document.createElement('p')
+const buttonToReferTo = lastArticle.lastElementChild
+
+lastArticle.insertBefore(newParagraph, buttonToReferTo)
