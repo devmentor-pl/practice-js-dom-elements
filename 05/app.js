@@ -13,3 +13,6 @@ for (const sibling of curr.parentElement.children) {
         sibling.classList.add('sibling')
     }
 }
+
+const siblingArticle = curr.parentElement.nextElementSibling
+siblingArticle.setAttribute('title', 'nextElementSibling')
