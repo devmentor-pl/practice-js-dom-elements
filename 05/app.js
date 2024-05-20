@@ -14,7 +14,9 @@ const currSiblings = currParent.children;
 
 for (let i = 0; i < currSiblings.length; i++) {
     const sibling = currSiblings[i];
-    sibling.classList.add('siblings');
+    if(currSiblings[i] !== curr){
+        sibling.classList.add('siblings');
+    }
 }
 
 // #3

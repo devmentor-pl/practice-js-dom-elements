@@ -9,7 +9,7 @@ const menuItems = [
 
 const ulElement = document.createElement('ul');
 
-for(let i=0; i<3; i++) {
+for(let i=0; i<menuItems.length; i++) {
     const liElement = document.createElement('li');
     const aElement = document.createElement('a');
     liElement.appendChild(aElement);
