@@ -12,3 +12,26 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+const button = document.createElement('button');
+console.log(button.innerHTML)
+
+for (const group in buttonSettings){
+    if(typeof buttonSettings[group] === 'object'){
+        for (const value in buttonSettings[group]){
+            if(group === 'attr'){
+                button.setAttribute(value, buttonSettings[group][value])
+            }else if(group ==='css'){
+                button.style[value] = buttonSettings[group][value]
+            }
+        }
+    } else {
+        button.innerText = buttonSettings[group];
+    } 
+}
+
+
+const sectionButton = document.querySelector('.parent-for-button')
+if(sectionButton){
+    sectionButton.appendChild(button)
+}
