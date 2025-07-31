@@ -2,7 +2,12 @@
 
 &nbsp;
 
-# `#05` JavaScript: Elementy DOM
+# `#05` JavaScript: Moj pierwszy projekt
+
+1.
+2.
+3.
+4.
 
 
 W pliku `./app.js` znajdziesz zmienną `curr`, która wskazuje na element o klasie `.js-curr`.
