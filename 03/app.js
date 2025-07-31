@@ -1,4 +1,4 @@
-console.log('DOM');
+
 
 const buttonSettings = {
     attr: {
@@ -12,3 +12,29 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+
+// Tworzenie elementu button
+const button = document.createElement('button');
+
+// Ustawianie atrybutów
+for (let key in buttonSettings.attr) {
+    button[key] = buttonSettings.attr[key];
+}
+
+// Ustawianie stylów
+for (let key in buttonSettings.css) {
+    button.style[key] = buttonSettings.css[key];
+}
+
+// Ustawianie tekstu przycisku
+button.textContent = buttonSettings.text;
+
+// Znalezienie elementu z klasą .parent-for-button i dodanie przycisku
+const parentElement = document.querySelector('.parent-for-button');
+if (parentElement) {
+    parentElement.appendChild(button);
+} else {
+    console.error('Element with class .parent-for-button not found.');
+}
+
