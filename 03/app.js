@@ -12,3 +12,20 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+const sectionElement = document.querySelector("section");
+
+if(sectionElement){
+    const newButton = document.createElement("button");
+
+    for(const key in buttonSettings.attr) {
+        newButton.setAttribute(key, buttonSettings.attr[key]);
+    }
+
+    for(const key in buttonSettings.css) {
+        newButton.style[key] = buttonSettings.css[key];
+    }
+
+    newButton.textContent = buttonSettings.text;
+    sectionElement.appendChild(newButton);
+}
