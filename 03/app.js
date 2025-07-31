@@ -12,3 +12,19 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+const button = document.createElement('button');
+
+for (const attr in buttonSettings.attr) {
+    button[attr] = buttonSettings.attr[attr];
+}
+for (const style in buttonSettings.css) {
+    button.style[style] = buttonSettings.css[style];
+}
+
+button.textContent = buttonSettings.text;
+
+const parentButton = document.querySelector('.parent-for-button');
+if (parentButton) {
+    parentButton.appendChild(button);
+}
