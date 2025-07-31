@@ -1,5 +1,3 @@
-console.log('DOM');
-
 const buttonSettings = {
     attr: {
         className: 'btn',
@@ -12,3 +10,19 @@ const buttonSettings = {
     },
     text: 'Click me!',
 }
+
+const parent = document.querySelector('.parent-for-button')
+
+if (parent) {
+    const createButton = document.createElement('button')
+    
+    createButton.classList.add(buttonSettings.attr.className)
+    createButton.setAttribute('title',buttonSettings.attr.title )
+    createButton.innerText = buttonSettings.text;
+    for (const key in buttonSettings.css) {
+        createButton.style[key] = buttonSettings.css[key];
+    }
+
+    parent.appendChild(createButton)
+}
+
