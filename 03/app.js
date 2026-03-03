@@ -14,22 +14,19 @@ const buttonSettings = {
 };
 
 const btnParent = document.querySelector('.parent-for-button');
+
 if (btnParent) {
 	const button = document.createElement('button');
-    
-	for (const key in buttonSettings) {
-		if (key === 'attr') {
-			for (const attrName in buttonSettings.attr) {
-				button[attrName] = buttonSettings.attr[attrName];
-			}
-		} else if (key === 'css') {
-			for (const styleName in buttonSettings.css) {
-				button.style[styleName] = buttonSettings.css[styleName];
-			}
-		} else if (key === 'text') {
-			button.textContent = buttonSettings.text;
-		}
+
+	for (const key in buttonSettings.attr) {
+		button[key] = buttonSettings.attr[key];
 	}
+
+	for (const key in buttonSettings.css) {
+		button.style[key] = buttonSettings.css[key];
+	}
+
+	button.textContent = buttonSettings.text;
 
 	btnParent.appendChild(button);
 }
